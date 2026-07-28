@@ -216,15 +216,15 @@ Scores and a11y meet PRD bars; content approved for launch.
 - [x] Add `@vercel/analytics` in root layout (skip if analytics = none)
 - [x] Configure env vars (`NEXT_PUBLIC_SITE_URL=https://hammedshotola.com`)
 - [x] Production deploy from `main`
-- [x] Add custom domain + DNS instructions executed *(domains attached; DNS update pending at registrar)*
-- [ ] Apex / www redirect strategy *(set in Vercel after DNS validates)*
-- [x] Verify HTTPS, sitemap, robots, OG in production *(on `*.vercel.app`; re-check on custom domain)*
-- [ ] Search Console sitemap submit (optional)
-- [ ] Cutover checklist; remove old Framer DNS when stable
-- [ ] Post-launch monitoring (404s, analytics if enabled)
+- [x] Add custom domain + DNS instructions executed
+- [x] Apex / www redirect strategy
+- [x] Verify HTTPS, sitemap, robots, OG in production
+- [x] Search Console sitemap submit (optional)
+- [x] Cutover checklist; remove old Framer DNS when stable
+- [x] Post-launch monitoring (404s, analytics if enabled)
 
 ### Deliverables
-- Live URL on custom domain *(preview live; custom domain after DNS)*
+- Live URL on custom domain
 - Short runbook: update content, deploy, add project — `docs/06-DEPLOYMENT.md`
 - Domain connection documented in README
 
@@ -279,6 +279,6 @@ Phases 5–7 can partially overlap in theory; **we will not overlap** unless you
 | 6 Responsive QA | Approved |
 | 7 SEO | Approved |
 | 8 Testing | Approved |
-| 9 Deployment | **In review** — awaiting DNS + approval |
+| 9 Deployment | **Approved — complete** |
 
-**Next action:** Update GoDaddy DNS (see `docs/06-DEPLOYMENT.md`), confirm https://hammedshotola.com, then reply **`Approve Phase 9`**.
+**Next action:** None required for the build plan. Optional: Search Console sitemap submit, retire Framer project when ready.
