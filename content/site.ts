@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
     "If it's complex, I make it clear. If it's clunky, I make it work — always with empathy, structure, and intention.",
   ],
   social: {
-    linkedin: "https://www.linkedin.com/in/shotola/",
+    linkedin: "https://www.linkedin.com/in/shammed/",
   },
   resume: {
     href: "/resume.pdf",
