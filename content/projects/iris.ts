@@ -10,8 +10,8 @@ export const irisProject: Project = {
   cover: {
     src: "/images/projects/iris/cover.webp",
     alt: "Image showing a screen of irish dashboard",
-    width: 14523,
-    height: 9666,
+    width: 2000,
+    height: 1331,
     cardBackground: "#FFFFFF",
   },
   cardCover: {
@@ -96,8 +96,8 @@ export const irisProject: Project = {
         {
           src: "/images/projects/iris/analytics.webp",
           alt: "Analytics Dashboard: Customised analytics tailored to stakeholder needs",
-          width: 9000,
-          height: 6120,
+          width: 2000,
+          height: 1360,
         },
       ],
     },
@@ -111,8 +111,8 @@ export const irisProject: Project = {
         {
           src: "/images/projects/iris/customer-view.webp",
           alt: "Unified Customer View: A comprehensive 360-degree customer profile accessible to all teams,",
-          width: 12000,
-          height: 8248,
+          width: 2000,
+          height: 1375,
         },
       ],
     },
@@ -125,8 +125,8 @@ export const irisProject: Project = {
         {
           src: "/images/projects/iris/messaging.webp",
           alt: "Messaging: In-app chat with Customer, Edit chat, Upload file, Assign chat.",
-          width: 12000,
-          height: 8012,
+          width: 2000,
+          height: 1335,
         },
       ],
     },
@@ -137,10 +137,10 @@ export const irisProject: Project = {
       content: "E-mail: Send, Reply, forward mail, upload Document",
       images: [
         {
-          src: "/images/projects/iris/email.png",
+          src: "/images/projects/iris/email.jpg",
           alt: "E-mail: Send, Reply, forward mail, upload Document",
-          width: 12000,
-          height: 7764,
+          width: 2000,
+          height: 1294,
         },
       ],
     },
@@ -153,8 +153,8 @@ export const irisProject: Project = {
         {
           src: "/images/projects/iris/app-review.webp",
           alt: "App Review: IOS and Android review, reply app store comment.",
-          width: 12000,
-          height: 7736,
+          width: 1999,
+          height: 1289,
         },
       ],
     },
@@ -167,8 +167,8 @@ export const irisProject: Project = {
         {
           src: "/images/projects/iris/settings.webp",
           alt: "Settings: Invite member, Assign roles, Create modules that feed into the systems",
-          width: 12000,
-          height: 7940,
+          width: 1999,
+          height: 1323,
         },
       ],
     },

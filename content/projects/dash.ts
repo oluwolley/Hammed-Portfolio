@@ -11,8 +11,8 @@ export const dashProject: Project = {
   cover: {
     src: "/images/projects/dash/cover.webp",
     alt: "Image Showing the fully designed Interface of dash app",
-    width: 3840,
-    height: 2175,
+    width: 2000,
+    height: 1133,
     cardBackground: "#EAF6F1",
   },
   cardCover: {
@@ -97,14 +97,14 @@ export const dashProject: Project = {
         {
           src: "/images/projects/dash/onboarding-1.webp",
           alt: "Image Showing the fully the onbairding screens of dash app",
-          width: 3840,
-          height: 2175,
+          width: 2000,
+          height: 1133,
         },
         {
           src: "/images/projects/dash/onboarding-2.webp",
           alt: "Image Showing the fully the onbairding screens of dash app",
-          width: 3840,
-          height: 2235,
+          width: 2000,
+          height: 1164,
         },
       ],
     },
@@ -118,14 +118,14 @@ export const dashProject: Project = {
         {
           src: "/images/projects/dash/send-1.webp",
           alt: "Image Showing the fully the Send money screens of dash app",
-          width: 3840,
-          height: 2466,
+          width: 1999,
+          height: 1284,
         },
         {
           src: "/images/projects/dash/send-2.webp",
           alt: "Image Showing the fully the Send money screens of dash app",
-          width: 3840,
-          height: 2556,
+          width: 2000,
+          height: 1331,
         },
       ],
     },

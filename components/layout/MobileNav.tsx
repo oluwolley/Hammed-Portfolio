@@ -41,7 +41,7 @@ export function MobileNav() {
         id={panelId}
         hidden={!open}
         className={cn(
-          "absolute left-0 right-0 top-full border-b border-border bg-background/95 backdrop-blur-md",
+          "absolute left-0 right-0 top-full border-b border-border bg-background md:bg-background/95 md:backdrop-blur-md",
           open ? "block" : "hidden",
         )}
       >

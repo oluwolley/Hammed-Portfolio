@@ -88,6 +88,13 @@
     }
   }
 
+  /* iOS Safari: sticky + blur + large images while scrolling is a known crash vector */
+  @supports (-webkit-touch-callout: none) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }

@@ -25,7 +25,12 @@ export function Reveal({
     if (!node) return;
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
+    // Avoid transform/opacity animations on coarse pointers — large image trees
+    // under CSS transforms can crash Mobile Safari while scrolling.
+    const coarse =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(pointer: coarse)").matches;
+    if (reduced || coarse) {
       setVisible(true);
       return;
     }
@@ -50,7 +55,7 @@ export function Reveal({
     <div
       ref={ref}
       className={cn(
-        "transition-[opacity,transform] duration-700 ease-out will-change-[opacity,transform]",
+        "transition-[opacity,transform] duration-700 ease-out",
         "motion-reduce:transition-none motion-reduce:translate-y-0 motion-reduce:opacity-100",
         visible ? "translate-y-0 opacity-100" : cn(hiddenY, "opacity-0"),
         className,

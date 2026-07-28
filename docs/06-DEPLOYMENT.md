@@ -31,7 +31,9 @@ In GoDaddy DNS for `hammedshotola.com`:
 | Type | Name | Value | Notes |
 |------|------|-------|-------|
 | **A** | `@` | `76.76.21.21` | Apex → Vercel |
-| **CNAME** | `www` | `cname.vercel-dns.com` | www → Vercel |
+| **CNAME** | `www` | `0defbc22a96e0b5.vercel-dns-017.com` | Exact value from Vercel Domains panel |
+
+> Use the **exact** CNAME / A values shown in your Vercel Domains UI — they can change as Vercel expands IPs.
 
 If GoDaddy already has an A/`@` or CNAME/`www` for Framer (or parking), **replace** those records.
 

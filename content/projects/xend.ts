@@ -10,8 +10,8 @@ export const xendProject: Project = {
   cover: {
     src: "/images/projects/xend/cover.webp",
     alt: "Image Showing the screens of Xend app",
-    width: 3183,
-    height: 1674,
+    width: 2000,
+    height: 1052,
     cardBackground: "#EEF2F7",
   },
   cardCover: {
@@ -93,14 +93,14 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/before.webp",
           alt: "Image Showing the screens the designed before redesign",
-          width: 4244,
-          height: 2112,
+          width: 1999,
+          height: 995,
         },
         {
           src: "/images/projects/xend/after.webp",
           alt: "Image Showing the screens the designed After redesign",
-          width: 3183,
-          height: 1584,
+          width: 1999,
+          height: 995,
         },
       ],
     },
@@ -114,8 +114,8 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/verification.webp",
           alt: "Image showing the Verification flows of Xend APP",
-          width: 4152,
-          height: 3762,
+          width: 2000,
+          height: 1812,
         },
       ],
     },
@@ -129,8 +129,8 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/services.webp",
           alt: "Image showing the Verification flows of other screens of Xend APP",
-          width: 3183,
-          height: 2019,
+          width: 2000,
+          height: 1269,
         },
       ],
     },

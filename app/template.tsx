@@ -6,5 +6,7 @@ type TemplateProps = {
 
 /** Remounts on navigation — subtle enter animation for route changes. */
 export default function Template({ children }: TemplateProps) {
-  return <div className="animate-page-in motion-reduce:animate-none">{children}</div>;
+  return (
+    <div className="motion-safe:animate-page-in max-md:animate-none">{children}</div>
+  );
 }

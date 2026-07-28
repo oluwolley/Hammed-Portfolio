@@ -5,7 +5,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/80 bg-background/80 pt-[env(safe-area-inset-top)] backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border/80 bg-background pt-[env(safe-area-inset-top)] md:bg-background/80 md:backdrop-blur-md">
       <div className="relative mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/#hero"

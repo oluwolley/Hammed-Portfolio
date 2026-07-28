@@ -82,7 +82,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] flex items-center justify-center bg-background/95 p-4 backdrop-blur-sm",
+        "fixed inset-0 z-[100] flex items-center justify-center bg-background p-4 md:bg-background/95 md:backdrop-blur-sm",
         "transition-opacity duration-200 ease-out motion-reduce:transition-none",
         open ? "opacity-100" : "opacity-0",
       )}
