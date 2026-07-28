@@ -4,6 +4,7 @@ export const siteConfig: SiteConfig = {
   name: "Hammed Shotola",
   shortName: "Hammed S",
   title: "Product Designer",
+  credential: "UK Global Talent",
   email: "shotolahammed01@gmail.com",
   url: "https://hammedshotola.com",
   avatar: {

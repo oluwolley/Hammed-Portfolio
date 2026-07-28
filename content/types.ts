@@ -10,6 +10,8 @@ export type SiteConfig = {
   /** Compact name used in the sticky header */
   shortName?: string;
   title: string;
+  /** Line shown under the role in the hero (e.g. visa / recognition) */
+  credential?: string;
   email: string;
   url: string;
   /** Short line for SEO / meta description */

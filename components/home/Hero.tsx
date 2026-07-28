@@ -32,9 +32,39 @@ export function Hero() {
                 />
               </span>
             ) : null}
-            <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
-              {siteConfig.title}
-            </p>
+            <div>
+              <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
+                {siteConfig.title}
+              </p>
+              {siteConfig.credential ? (
+                <p className="mt-1 flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <span
+                    className="inline-flex shrink-0 overflow-hidden rounded-[2px] ring-1 ring-border/60"
+                    aria-hidden
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 60 30"
+                      width="18"
+                      height="12"
+                      className="block"
+                    >
+                      <clipPath id="hero-uk-flag">
+                        <path d="M0 0h60v30H0z" />
+                      </clipPath>
+                      <g clipPath="url(#hero-uk-flag)">
+                        <path fill="#012169" d="M0 0h60v30H0z" />
+                        <path stroke="#FFF" strokeWidth="6" d="m0 0 60 30M60 0 0 30" />
+                        <path stroke="#C8102E" strokeWidth="4" d="m0 0 60 30M60 0 0 30" />
+                        <path stroke="#FFF" strokeWidth="10" d="M30 0v30M0 15h60" />
+                        <path stroke="#C8102E" strokeWidth="6" d="M30 0v30M0 15h60" />
+                      </g>
+                    </svg>
+                  </span>
+                  <span>{siteConfig.credential}</span>
+                </p>
+              ) : null}
+            </div>
           </div>
           <h1
             id="hero-heading"
