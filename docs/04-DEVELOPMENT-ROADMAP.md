@@ -211,21 +211,21 @@ Scores and a11y meet PRD bars; content approved for launch.
 **Goal:** Live on Vercel with custom domain; Framer retired when ready.
 
 ### Tasks
-- [ ] Push to GitHub (if not already)
-- [ ] Create Vercel project; link repo
-- [ ] Add `@vercel/analytics` in root layout (skip if analytics = none)
-- [ ] Configure env vars (`NEXT_PUBLIC_SITE_URL=https://hammedshotola.com`)
-- [ ] Production deploy from `main`
-- [ ] Add custom domain + DNS instructions executed
-- [ ] Apex / www redirect strategy
-- [ ] Verify HTTPS, sitemap, robots, OG in production
+- [x] Push to GitHub (if not already)
+- [x] Create Vercel project; link repo
+- [x] Add `@vercel/analytics` in root layout (skip if analytics = none)
+- [x] Configure env vars (`NEXT_PUBLIC_SITE_URL=https://hammedshotola.com`)
+- [x] Production deploy from `main`
+- [x] Add custom domain + DNS instructions executed *(domains attached; DNS update pending at registrar)*
+- [ ] Apex / www redirect strategy *(set in Vercel after DNS validates)*
+- [x] Verify HTTPS, sitemap, robots, OG in production *(on `*.vercel.app`; re-check on custom domain)*
 - [ ] Search Console sitemap submit (optional)
 - [ ] Cutover checklist; remove old Framer DNS when stable
 - [ ] Post-launch monitoring (404s, analytics if enabled)
 
 ### Deliverables
-- Live URL on custom domain
-- Short runbook: update content, deploy, add project
+- Live URL on custom domain *(preview live; custom domain after DNS)*
+- Short runbook: update content, deploy, add project — `docs/06-DEPLOYMENT.md`
 - Domain connection documented in README
 
 ### Exit criteria
@@ -279,6 +279,6 @@ Phases 5–7 can partially overlap in theory; **we will not overlap** unless you
 | 6 Responsive QA | Approved |
 | 7 SEO | Approved |
 | 8 Testing | Approved |
-| 9 Deployment | **In progress** |
+| 9 Deployment | **In review** — awaiting DNS + approval |
 
-**Next action:** Complete Vercel deploy + domain; reply **`Approve Phase 9`** when live.
+**Next action:** Update GoDaddy DNS (see `docs/06-DEPLOYMENT.md`), confirm https://hammedshotola.com, then reply **`Approve Phase 9`**.

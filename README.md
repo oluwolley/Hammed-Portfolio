@@ -49,9 +49,16 @@ See [`docs/05-TEST-NOTES.md`](./docs/05-TEST-NOTES.md) for Phase 8 Lighthouse sc
 
 ## Deploy (Vercel)
 
-1. Import the GitHub repo in [Vercel](https://vercel.com/new).
-2. Set `NEXT_PUBLIC_SITE_URL=https://hammedshotola.com`.
-3. Connect domain **hammedshotola.com** in project settings → Domains.
+**Live preview:** https://hammed-portfolio-cyan.vercel.app  
+
+Full cutover steps (DNS for `hammedshotola.com`): see [`docs/06-DEPLOYMENT.md`](./docs/06-DEPLOYMENT.md).
+
+1. Repo is linked to Vercel project `hammed-portfolio` (auto-deploys from `main`).
+2. Env: `NEXT_PUBLIC_SITE_URL=https://hammedshotola.com`.
+3. At GoDaddy, set:
+   - **A** `@` → `76.76.21.21`
+   - **CNAME** `www` → `cname.vercel-dns.com`
+4. In Vercel → Domains, wait until both show **Valid**, then redirect www → apex.
 
 ## Scripts
 
