@@ -7,7 +7,7 @@ Custom Product Design portfolio (Next.js, TypeScript, Tailwind). Planning docs l
 **Node.js:** use **v22 LTS** (or v20). Next.js dev currently breaks on **Node 26** (`getCurrentDirectory` / `fileExists` errors). This repo includes `.nvmrc` set to `22`.
 
 ```bash
-cd "/Users/oluwolley/Desktop/Hammed - Portfolio"
+cd ~/Developer/Hammed-Portfolio
 
 # Homebrew (if you use Node 26 globally):
 export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) only after the terminal show
 
 ### If startup is very slow
 
-This project lives on **Desktop**, which is often iCloud-synced. That can turn `node_modules` into “dataless” stubs and make `next dev` hang while files download. Prefer keeping the repo outside iCloud (e.g. `~/Developer`), and free disk space if your Mac is nearly full.
+Keep the repo outside iCloud Desktop (this copy lives in `~/Developer`). Free disk space if your Mac is nearly full.
 
 ```bash
 # Stop stale servers, reinstall deps locally, restart on Node 22
@@ -41,7 +41,11 @@ npm run dev
 
 ## Resume PDF
 
-Add your file at `public/resume.pdf` (placeholder OK until final résumé is ready).
+Add your file at `public/resume.pdf`, then set `resume.available: true` in `content/site.ts`. Until then the site shows an email request CTA (no broken PDF link).
+
+## Test notes
+
+See [`docs/05-TEST-NOTES.md`](./docs/05-TEST-NOTES.md) for Phase 8 Lighthouse scores and QA checklist.
 
 ## Deploy (Vercel)
 
@@ -58,6 +62,13 @@ Add your file at `public/resume.pdf` (placeholder OK until final résumé is rea
 | `npm run build` | Production build |
 | `npm run start` | Serve production build |
 | `npm run lint` | ESLint |
+
+## SEO
+
+- Metadata + Open Graph / Twitter: `lib/seo.ts`, `app/layout.tsx`, `app/page.tsx`, project routes
+- JSON-LD: Person + WebSite on home; CreativeWork on case studies
+- `https://hammedshotola.com/sitemap.xml` and `/robots.txt` (via `app/sitemap.ts`, `app/robots.ts`)
+- Icons: `app/icon.svg`, `app/apple-icon.tsx`; home OG image: `app/opengraph-image.tsx`
 
 ## Content
 

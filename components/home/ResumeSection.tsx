@@ -5,7 +5,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function ResumeSection() {
-  const { resume } = siteConfig;
+  const { resume, email } = siteConfig;
+  const canDownload = resume.available !== false;
 
   return (
     <Section id="resume" ariaLabelledby="resume-heading">
@@ -15,12 +16,22 @@ export function ResumeSection() {
             <SectionHeading
               id="resume-heading"
               title="Resume"
-              description="Download a PDF overview of experience, skills, and selected work."
+              description={
+                canDownload
+                  ? "Download a PDF overview of experience, skills, and selected work."
+                  : "A PDF resume is being prepared. Reach out by email for the latest overview of experience and selected work."
+              }
             />
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <ButtonLink href={resume.href} download>
-                {resume.label}
-              </ButtonLink>
+              {canDownload ? (
+                <ButtonLink href={resume.href} download>
+                  {resume.label}
+                </ButtonLink>
+              ) : (
+                <ButtonLink href={`mailto:${email}?subject=Resume%20request`}>
+                  Request resume by email
+                </ButtonLink>
+              )}
               {resume.updatedAt ? (
                 <p className="text-sm text-muted-foreground">Updated {resume.updatedAt}</p>
               ) : null}

@@ -26,6 +26,7 @@ export const siteConfig: SiteConfig = {
     href: "/resume.pdf",
     label: "Download resume (PDF)",
     updatedAt: "2026",
+    available: true,
   },
   nav: [
     { label: "Work", href: "/#work" },

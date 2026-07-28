@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ImageRef } from "@/content/types";
 import { FadeImage } from "@/components/motion/FadeImage";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
   const [index, setIndex] = useState(initialIndex);
   const [entered, setEntered] = useState(false);
   const [exiting, setExiting] = useState(false);
+  const closeRef = useRef<HTMLButtonElement>(null);
   const image = images[index];
 
   const goPrev = useCallback(() => {
@@ -41,10 +42,28 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
   }, []);
 
   useEffect(() => {
+    closeRef.current?.focus();
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") requestClose();
       if (e.key === "ArrowLeft") goPrev();
       if (e.key === "ArrowRight") goNext();
+      if (e.key === "Tab") {
+        const root = closeRef.current?.closest('[role="dialog"]');
+        if (!(root instanceof HTMLElement)) return;
+        const focusable = root.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        if (!focusable.length) return;
+        const first = focusable[0]!;
+        const last = focusable[focusable.length - 1]!;
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
@@ -73,6 +92,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
       onClick={requestClose}
     >
       <button
+        ref={closeRef}
         type="button"
         className="touch-target absolute right-3 top-3 z-10 inline-flex items-center justify-center rounded-md border border-border bg-background px-3 text-sm transition-opacity hover:opacity-80 sm:right-4 sm:top-4"
         onClick={requestClose}

@@ -11,9 +11,21 @@ export function Footer() {
           © {year} {siteConfig.name}. {siteConfig.title}.
         </p>
         <div className="flex flex-wrap gap-x-4 gap-y-2">
-          <Link href={siteConfig.resume.href} className="touch-target inline-flex items-center hover:text-foreground">
-            Resume
-          </Link>
+          {siteConfig.resume.available !== false ? (
+            <Link
+              href={siteConfig.resume.href}
+              className="touch-target inline-flex items-center hover:text-foreground"
+            >
+              Download resume
+            </Link>
+          ) : (
+            <a
+              href={`mailto:${siteConfig.email}?subject=Resume%20request`}
+              className="touch-target inline-flex items-center hover:text-foreground"
+            >
+              Request resume
+            </a>
+          )}
           {siteConfig.social.linkedin && (
             <a
               href={siteConfig.social.linkedin}
@@ -21,14 +33,14 @@ export function Footer() {
               rel="noopener noreferrer"
               className="touch-target inline-flex items-center hover:text-foreground"
             >
-              LinkedIn
+              LinkedIn profile
             </a>
           )}
           <a
             href={`mailto:${siteConfig.email}`}
             className="touch-target inline-flex items-center hover:text-foreground"
           >
-            Email
+            Email Hammed
           </a>
         </div>
       </div>

@@ -47,6 +47,7 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
             fill
             className="object-contain object-center p-4 sm:p-6 md:p-8"
             priority
+            fetchPriority="high"
             sizes="(max-width: 1280px) 100vw, 1024px"
           />
         ) : (

@@ -73,7 +73,7 @@ export function MobileTableOfContents({ sections }: MobileTableOfContentsProps) 
 
   return (
     <details className="group rounded-xl border border-border bg-muted/20 lg:hidden">
-      <summary className="touch-target flex cursor-pointer list-none items-center px-4 text-sm font-medium [&::-webkit-details-marker]:hidden">
+      <summary className="touch-target flex cursor-pointer list-none items-center px-4 text-sm font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground [&::-webkit-details-marker]:hidden">
         On this page
       </summary>
       <nav aria-label="Table of contents" className="border-t border-border px-2 py-2">

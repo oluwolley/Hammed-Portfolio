@@ -1,22 +1,13 @@
-import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import { siteConfig } from "@/content/site";
-import { getSiteUrl } from "@/lib/utils";
+import { buildRootMetadata } from "@/lib/seo";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
-  title: {
-    default: `${siteConfig.name} — ${siteConfig.title}`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.intro,
-};
+export const metadata = buildRootMetadata();
 
 export default function RootLayout({
   children,
@@ -37,7 +28,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          {process.env.NODE_ENV === "production" ? <Analytics /> : null}
+          {process.env.VERCEL ? <Analytics /> : null}
         </ThemeProvider>
       </body>
     </html>

@@ -21,6 +21,8 @@ export type SiteConfig = {
     href: string;
     label: string;
     updatedAt?: string;
+    /** When false, show email CTA instead of a broken PDF link */
+    available?: boolean;
   };
   nav: { label: string; href: string }[];
 };

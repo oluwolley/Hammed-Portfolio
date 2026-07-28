@@ -1,26 +1,44 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const panelId = useId();
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <div className="md:hidden">
       <button
+        ref={buttonRef}
         type="button"
         className="touch-target inline-flex items-center justify-center rounded-md border border-border px-3 text-sm font-medium"
         aria-expanded={open}
-        aria-controls="mobile-nav-panel"
+        aria-controls={panelId}
+        aria-label={open ? "Close menu" : "Open menu"}
         onClick={() => setOpen((v) => !v)}
       >
-        Menu
+        {open ? "Close" : "Menu"}
       </button>
       <div
-        id="mobile-nav-panel"
+        id={panelId}
         hidden={!open}
         className={cn(
           "absolute left-0 right-0 top-full border-b border-border bg-background/95 backdrop-blur-md",
