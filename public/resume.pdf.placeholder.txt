@@ -1,0 +1,1 @@
+Add your résumé PDF here as `resume.pdf` (linked from the site as `/resume.pdf`).
