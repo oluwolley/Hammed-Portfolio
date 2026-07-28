@@ -7,6 +7,8 @@ export type SocialLinks = {
 
 export type SiteConfig = {
   name: string;
+  /** Compact name used in the sticky header */
+  shortName?: string;
   title: string;
   email: string;
   url: string;

@@ -2,6 +2,7 @@ import type { SiteConfig } from "./types";
 
 export const siteConfig: SiteConfig = {
   name: "Hammed Shotola",
+  shortName: "Hammed S",
   title: "Product Designer",
   email: "shotolahammed01@gmail.com",
   url: "https://hammedshotola.com",

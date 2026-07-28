@@ -40,7 +40,7 @@ export function Hero() {
             id="hero-heading"
             className="mt-4 max-w-5xl text-[clamp(2.75rem,11vw,6rem)] font-medium leading-[1.02] tracking-tight break-words"
           >
-            {siteConfig.name}
+            {siteConfig.shortName ?? siteConfig.name}
           </h1>
 
           <figure className="mt-8 max-w-3xl border-l-2 border-foreground/15 pl-4 sm:mt-10 sm:pl-6 md:mt-12 md:pl-8">
