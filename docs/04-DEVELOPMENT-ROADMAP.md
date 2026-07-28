@@ -145,11 +145,11 @@ Motion feels premium and quiet; you approve restraint level.
 **Goal:** Dedicated QA pass across breakpoints (even if built mobile-first earlier).
 
 ### Tasks
-- [ ] Audit 320 / 375 / 768 / 1024 / 1280 / 1440
-- [ ] Fix TOC, galleries, header, typography edge cases
-- [ ] Touch target and sticky element checks
-- [ ] Landscape mobile / short viewport checks
-- [ ] Print stylesheet optional (nice-to-have for case studies)
+- [x] Audit 320 / 375 / 768 / 1024 / 1280 / 1440
+- [x] Fix TOC, galleries, header, typography edge cases
+- [x] Touch target and sticky element checks
+- [x] Landscape mobile / short viewport checks
+- [x] Print stylesheet optional (nice-to-have for case studies)
 
 ### Deliverables
 - Responsive QA checklist completed
@@ -271,7 +271,12 @@ Phases 5–7 can partially overlap in theory; **we will not overlap** unless you
 
 | Phase | Status |
 |-------|--------|
-| 1 Planning | **Decisions locked** (incl. Vercel Analytics, email, resume placeholder) — awaiting **Approve Phase 1** |
-| 2–9 | Blocked until you approve Phase 1 |
+| 1 Planning | Complete |
+| 2 Project setup | Complete |
+| 3 Homepage | Approved |
+| 4 Case study pages | Approved |
+| 5 Animations | Approved |
+| 6 Responsive QA | **In review** — awaiting approval |
+| 7–9 | Blocked until prior phase approved |
 
-**Next action:** Reply **`Approve Phase 1`** to start Phase 2 (project setup). No code until then.
+**Next action:** Review responsive pass on phone + desktop, then reply **`Approve Phase 6`**.

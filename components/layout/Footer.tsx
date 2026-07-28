@@ -6,12 +6,12 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-sm text-muted-foreground sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-sm text-muted-foreground sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
         <p>
           © {year} {siteConfig.name}. {siteConfig.title}.
         </p>
-        <div className="flex flex-wrap gap-4">
-          <Link href={siteConfig.resume.href} className="hover:text-foreground">
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+          <Link href={siteConfig.resume.href} className="touch-target inline-flex items-center hover:text-foreground">
             Resume
           </Link>
           {siteConfig.social.linkedin && (
@@ -19,14 +19,14 @@ export function Footer() {
               href={siteConfig.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground"
+              className="touch-target inline-flex items-center hover:text-foreground"
             >
               LinkedIn
             </a>
           )}
           <a
             href={`mailto:${siteConfig.email}`}
-            className="hover:text-foreground"
+            className="touch-target inline-flex items-center hover:text-foreground"
           >
             Email
           </a>

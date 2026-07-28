@@ -8,7 +8,7 @@ type ContainerProps = {
 
 export function Container({ children, className }: ContainerProps) {
   return (
-    <div className={cn("mx-auto max-w-6xl px-4 sm:px-6 lg:px-8", className)}>
+    <div className={cn("mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8", className)}>
       {children}
     </div>
   );
@@ -26,7 +26,7 @@ export function Section({ id, children, className, ariaLabelledby }: SectionProp
     <section
       id={id}
       aria-labelledby={ariaLabelledby}
-      className={cn("scroll-mt-16 py-20 md:py-28", className)}
+      className={cn("scroll-mt-20 py-16 sm:py-20 md:scroll-mt-16 md:py-28", className)}
     >
       {children}
     </section>

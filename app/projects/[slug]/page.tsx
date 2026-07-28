@@ -1,7 +1,17 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProject, getProjectSlugs } from "@/content/projects";
+import { getAdjacentProjects, getProject, getProjectSlugs } from "@/content/projects";
+import { siteConfig } from "@/content/site";
+import { getVisibleSections } from "@/lib/case-study";
+import { getSiteUrl } from "@/lib/utils";
 import { Container } from "@/components/ui/Container";
+import { CaseStudyChrome } from "@/components/projects/CaseStudyChrome";
+import { CaseStudyHero } from "@/components/projects/CaseStudyHero";
+import { CaseStudySectionBlock } from "@/components/projects/CaseStudySection";
+import { ProjectPager } from "@/components/projects/ProjectPager";
+import {
+  MobileTableOfContents,
+  TableOfContents,
+} from "@/components/projects/TableOfContents";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -16,9 +26,19 @@ export async function generateMetadata({ params }: PageProps) {
   const project = getProject(slug);
   if (!project) return {};
 
+  const overview = project.sections.find((s) => s.kind === "overview")?.content;
+  const description = project.seo?.description ?? overview ?? project.impact;
+  const title = project.seo?.title ?? `${project.title} — Case Study`;
+
   return {
-    title: `${project.title} — Case Study`,
-    description: project.sections.find((s) => s.kind === "overview")?.content,
+    title,
+    description,
+    openGraph: {
+      title: `${title} | ${siteConfig.name}`,
+      description,
+      url: `${getSiteUrl()}/projects/${project.slug}`,
+      images: [{ url: project.cover.src, alt: project.cover.alt }],
+    },
   };
 }
 
@@ -28,28 +48,35 @@ export default async function ProjectPage({ params }: PageProps) {
 
   if (!project) notFound();
 
-  const overview = project.sections.find((s) => s.kind === "overview");
+  const sections = getVisibleSections(project.sections);
+  const { previous, next } = getAdjacentProjects(project.slug);
 
   return (
-    <Container className="py-16 md:py-24">
-      <Link
-        href="/#work"
-        className="text-sm text-muted-foreground hover:text-foreground"
-      >
-        ← Back to portfolio
-      </Link>
-      <header className="mt-8 max-w-3xl">
-        <p className="text-sm text-muted-foreground">{project.role}</p>
-        <h1 className="mt-2 text-3xl font-medium tracking-tight md:text-5xl">
-          {project.title}
-        </h1>
-        <p className="mt-4 text-muted-foreground">{project.impact}</p>
-      </header>
-      <article className="mt-12 max-w-3xl font-serif text-lg leading-relaxed text-muted-foreground">
-        <h2 className="font-sans text-xl font-medium text-foreground">{overview?.title ?? "Overview"}</h2>
-        <p className="mt-4">{overview?.content}</p>
-        <p className="mt-6 font-sans text-sm">Full case study template — Phase 4.</p>
-      </article>
-    </Container>
+    <CaseStudyChrome>
+      <Container className="py-12 md:py-16">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_200px] lg:gap-12 xl:grid-cols-[minmax(0,1fr)_220px] xl:gap-20">
+          <article>
+            <CaseStudyHero project={project} />
+            <MobileTableOfContents sections={sections} />
+            <div className="mt-10 space-y-0 md:mt-12">
+              {sections.map((section) => (
+                <CaseStudySectionBlock
+                  key={section.id}
+                  section={section}
+                  mediaFit={project.mediaFit}
+                />
+              ))}
+            </div>
+            <ProjectPager previous={previous} next={next} />
+          </article>
+
+          <aside className="hidden lg:block">
+            <div className="sticky top-20 pt-2">
+              <TableOfContents sections={sections} />
+            </div>
+          </aside>
+        </div>
+      </Container>
+    </CaseStudyChrome>
   );
 }

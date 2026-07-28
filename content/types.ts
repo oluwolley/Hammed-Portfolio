@@ -10,7 +10,12 @@ export type SiteConfig = {
   title: string;
   email: string;
   url: string;
+  /** Short line for SEO / meta description */
   intro: string;
+  /** Hero positioning quote (displayed below name) */
+  quote: string[];
+  /** Circular portrait shown beside the title in the hero */
+  avatar?: ImageRef;
   social: SocialLinks;
   resume: {
     href: string;
@@ -25,6 +30,8 @@ export type ImageRef = {
   alt: string;
   width?: number;
   height?: number;
+  /** Soft fill behind contain-fit covers on project cards */
+  cardBackground?: string;
 };
 
 export type CaseStudySectionKind =
@@ -50,11 +57,19 @@ export type CaseStudySectionKind =
   | "lessons"
   | "nextSteps";
 
+export type MetricItem = {
+  label: string;
+  value: string;
+};
+
 export type CaseStudySection = {
   id: string;
   kind: CaseStudySectionKind;
   title: string;
   content?: string;
+  images?: ImageRef[];
+  embedUrl?: string;
+  metrics?: MetricItem[];
   enabled?: boolean;
 };
 
@@ -63,10 +78,16 @@ export type Project = {
   title: string;
   role: string;
   impact: string;
+  /** Short line on homepage work cards (falls back to impact) */
+  tagline?: string;
   cover: ImageRef;
+  /** Optional homepage card image (falls back to cover) */
+  cardCover?: ImageRef;
   timeline?: string;
   featured: boolean;
   order: number;
+  /** How case study media fills its frame. Default: contain */
+  mediaFit?: "cover" | "contain";
   sections: CaseStudySection[];
   related?: string[];
   seo?: {

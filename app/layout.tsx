@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import { Newsreader } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -9,12 +8,6 @@ import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { siteConfig } from "@/content/site";
 import { getSiteUrl } from "@/lib/utils";
 import "./globals.css";
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-newsreader",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -34,7 +27,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${GeistSans.variable} ${newsreader.variable}`}
+      className={GeistSans.variable}
     >
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>
@@ -44,7 +37,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <Analytics />
+          {process.env.NODE_ENV === "production" ? <Analytics /> : null}
         </ThemeProvider>
       </body>
     </html>

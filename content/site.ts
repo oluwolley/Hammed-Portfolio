@@ -5,8 +5,20 @@ export const siteConfig: SiteConfig = {
   title: "Product Designer",
   email: "shotolahammed01@gmail.com",
   url: "https://hammedshotola.com",
+  avatar: {
+    src: "/images/hammed.jpg",
+    alt: "Portrait of Hammed Shotola",
+    width: 400,
+    height: 400,
+  },
   intro:
-    "I design clear, thoughtful product experiences — from research and strategy through polished UI and developer handoff.",
+    "Product (UX) Designer turning complex systems into simple, human-centred experiences — with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",
+  quote: [
+    "Hi, I'm a Product (UX) Designer with a strong focus on turning complex systems into simple, human-centred experiences.",
+    "I design digital products that simplify complex systems, I bring clarity, structure, and empathy to every interface.",
+    "I care deeply about accessibility, security, and real-world usability, especially in fintech, e-commerce, and regulation-heavy environments.",
+    "If it's complex, I make it clear. If it's clunky, I make it work — always with empathy, structure, and intention.",
+  ],
   social: {
     linkedin: "https://www.linkedin.com/in/shotola/",
   },
@@ -16,7 +28,6 @@ export const siteConfig: SiteConfig = {
     updatedAt: "2026",
   },
   nav: [
-    { label: "About", href: "/#about" },
     { label: "Work", href: "/#work" },
     { label: "Resume", href: "/#resume" },
     { label: "Contact", href: "/#contact" },

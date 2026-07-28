@@ -4,6 +4,41 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+function SunIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={className}
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={className}
+    >
+      <path d="M21 14.5A8.5 8.5 0 1110.5 3a7 7 0 0010.5 11.5z" />
+    </svg>
+  );
+}
+
 export function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -13,7 +48,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <span
-        className="inline-block h-9 w-9 rounded-md border border-border"
+        className="touch-target inline-block rounded-md border border-border"
         aria-hidden
       />
     );
@@ -25,15 +60,18 @@ export function ThemeToggle() {
     <button
       type="button"
       className={cn(
-        "inline-flex h-9 w-9 items-center justify-center rounded-md border border-border",
-        "text-sm transition-colors hover:bg-muted",
+        "touch-target inline-flex items-center justify-center rounded-md border border-border",
+        "text-foreground transition-colors hover:bg-muted",
       )}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      <span aria-hidden className="text-xs font-medium uppercase tracking-wide">
-        {isDark ? "Light" : "Dark"}
-      </span>
+      {isDark ? (
+        <SunIcon className="h-4 w-4" />
+      ) : (
+        <MoonIcon className="h-4 w-4" />
+      )}
     </button>
   );
 }
