@@ -8,8 +8,8 @@ export const siteConfig: SiteConfig = {
   avatar: {
     src: "/images/hammed.jpg",
     alt: "Portrait of Hammed Shotola",
-    width: 400,
-    height: 400,
+    width: 560,
+    height: 560,
   },
   intro:
     "Product (UX) Designer turning complex systems into simple, human-centred experiences — with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",

@@ -20,14 +20,14 @@ export function Hero() {
         <Reveal>
           <div className="flex items-center gap-3">
             {siteConfig.avatar ? (
-              <span className="relative inline-block size-10 shrink-0 overflow-hidden rounded-full ring-1 ring-border sm:size-11">
+              <span className="relative inline-block size-10 shrink-0 overflow-hidden rounded-full bg-[#F3F3F3] ring-1 ring-border sm:size-11">
                 <Image
                   src={siteConfig.avatar.src}
                   alt={siteConfig.avatar.alt}
                   width={112}
                   height={112}
                   sizes="44px"
-                  className="size-full rounded-full object-cover"
+                  className="size-full rounded-full object-cover object-[center_38%]"
                   priority
                 />
               </span>

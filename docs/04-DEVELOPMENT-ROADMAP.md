@@ -279,6 +279,6 @@ Phases 5–7 can partially overlap in theory; **we will not overlap** unless you
 | 6 Responsive QA | Approved |
 | 7 SEO | Approved |
 | 8 Testing | Approved |
-| 9 Deployment | **Next** |
+| 9 Deployment | **In progress** |
 
-**Next action:** Reply **`Start Phase 9`** (or continue) for Vercel + domain cutover.
+**Next action:** Complete Vercel deploy + domain; reply **`Approve Phase 9`** when live.
