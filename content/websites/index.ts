@@ -46,6 +46,51 @@ export const websites: Website[] = [
     status: "live",
     order: 3,
   },
+  {
+    slug: "finpeak",
+    title: "FinPeak",
+    description: "Sleek fintech platform",
+    mockup: {
+      src: "/images/websites/finpeak/mockup.jpg",
+      alt: "FinPeak fintech dashboard homepage",
+      width: 1600,
+      height: 900,
+      cardBackground: "#07111F",
+    },
+    url: "https://studio.hammedshotola.com/finpeak",
+    status: "live",
+    order: 4,
+  },
+  {
+    slug: "greengrid",
+    title: "GreenGrid Energy",
+    description: "Renewable energy platform",
+    mockup: {
+      src: "/images/websites/greengrid/mockup.jpg",
+      alt: "GreenGrid Energy solar dashboard homepage",
+      width: 1600,
+      height: 900,
+      cardBackground: "#F4FAF6",
+    },
+    url: "https://studio.hammedshotola.com/greengrid",
+    status: "live",
+    order: 5,
+  },
+  {
+    slug: "skillnest",
+    title: "SkillNest",
+    description: "Premium e-learning platform",
+    mockup: {
+      src: "/images/websites/skillnest/mockup.jpg",
+      alt: "SkillNest e-learning platform homepage",
+      width: 1600,
+      height: 900,
+      cardBackground: "#FFFAF5",
+    },
+    url: "https://studio.hammedshotola.com/skillnest",
+    status: "live",
+    order: 6,
+  },
 ];
 
 export function getAllWebsites(): Website[] {
