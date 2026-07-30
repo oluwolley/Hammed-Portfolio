@@ -8,10 +8,10 @@ import { WebsiteCard } from "@/components/websites/WebsiteCard";
 import { Reveal } from "@/components/motion/Reveal";
 
 const pageIntro =
-  "Welcome to my digital sandbox. The projects in this section aren't client commissions or real-world brands—they are fully functional, conceptual websites built from the ground up.";
+  "Welcome to my digital sandbox. The projects in this section aren't client commissions or real-world brands they are fully functional, conceptual websites built from the ground up.";
 
 const description = truncateDescription(
-  `No briefs, no boundaries just pure code and design. ${pageIntro}`,
+  `No briefs, no boundaries just design and pure code. ${pageIntro}`,
 );
 
 export const metadata: Metadata = {
