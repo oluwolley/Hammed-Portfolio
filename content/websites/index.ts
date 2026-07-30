@@ -3,19 +3,48 @@ import type { Website } from "../types";
 export const websites: Website[] = [
   {
     slug: "kinetik-studio",
-    title: "Kinetik® — Interface studio",
-    description:
-      "A concept site for a fictional design studio: WebGL hero, scroll-scrubbed typography, and schematic product mockups. Built with Next.js, GSAP, and Three.js.",
+    title: "Kinetic",
+    description: "Digital design studio",
     mockup: {
       src: "/images/websites/kinetik-studio/mockup.jpg",
-      alt: "Kinetik studio landing page with a WebGL orb behind the headline 'Interfaces that move people'",
+      alt: "Kinetic digital design studio landing page",
       width: 1600,
-      height: 1001,
+      height: 900,
       cardBackground: "#0B0B0C",
     },
     url: "https://studio.hammedshotola.com/kinetik",
     status: "live",
     order: 1,
+  },
+  {
+    slug: "medlink",
+    title: "MedLink",
+    description: "Digital Healthcare Platform",
+    mockup: {
+      src: "/images/websites/medlink/mockup.jpg",
+      alt: "MedLink healthcare platform hero with consultation booking UI",
+      width: 1600,
+      height: 900,
+      cardBackground: "#F5F9FC",
+    },
+    url: "https://studio.hammedshotola.com/medlink",
+    status: "live",
+    order: 2,
+  },
+  {
+    slug: "remotehub",
+    title: "RemoteHub",
+    description: "Modern remote job platform",
+    mockup: {
+      src: "/images/websites/remotehub/mockup.jpg",
+      alt: "RemoteHub job platform homepage with search and remote career messaging",
+      width: 1600,
+      height: 900,
+      cardBackground: "#111118",
+    },
+    url: "https://studio.hammedshotola.com/remotehub",
+    status: "live",
+    order: 3,
   },
 ];
 

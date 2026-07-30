@@ -47,7 +47,7 @@ export default function WebsitesPage() {
         <Reveal>
           <WebsitesHero />
         </Reveal>
-        <ul className="mt-12 grid gap-5 sm:mt-16 sm:gap-6 md:grid-cols-2 md:gap-8">
+        <ul className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {sites.map((website, index) => (
             <li key={website.slug}>
               <Reveal delayMs={index * 60}>
