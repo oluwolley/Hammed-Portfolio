@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/content/site";
 
-export const alt = `${siteConfig.name} — ${siteConfig.title}`;
+export const alt = `${siteConfig.name} | ${siteConfig.title}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -53,7 +53,7 @@ export default function OpenGraphImage() {
               color: "#404040",
             }}
           >
-            Product design portfolio — fintech, systems, and human-centred UX.
+            Product design portfolio for fintech, systems, and human-centred UX.
           </div>
         </div>
         <div style={{ display: "flex", fontSize: 24, color: "#737373" }}>

@@ -10,21 +10,21 @@ import { getSiteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${siteConfig.name} — ${siteConfig.title}`,
+    absolute: `${siteConfig.name} | ${siteConfig.title}`,
   },
   description: siteConfig.intro,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: `${siteConfig.name} — ${siteConfig.title}`,
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.intro,
     url: getSiteUrl(),
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.title}`,
+    title: `${siteConfig.name} | ${siteConfig.title}`,
     description: siteConfig.intro,
   },
 };

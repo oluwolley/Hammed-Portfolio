@@ -25,7 +25,7 @@ export function defaultOgImage() {
 }
 
 export function buildRootMetadata(): Metadata {
-  const title = `${siteConfig.name} — ${siteConfig.title}`;
+  const title = `${siteConfig.name} | ${siteConfig.title}`;
   const description = siteConfig.intro;
   const ogImage = defaultOgImage();
 
@@ -99,7 +99,7 @@ export function buildHomeJsonLd() {
   const website = {
     "@type": "WebSite",
     "@id": `${getSiteUrl()}/#website`,
-    name: `${siteConfig.name} — Portfolio`,
+    name: `${siteConfig.name} | Portfolio`,
     url: getSiteUrl(),
     description: siteConfig.intro,
     publisher: { "@id": `${getSiteUrl()}/#person` },
@@ -141,14 +141,14 @@ export function buildProjectJsonLd(project: Project) {
     inLanguage: "en-GB",
     isPartOf: {
       "@type": "WebSite",
-      name: `${siteConfig.name} — Portfolio`,
+      name: `${siteConfig.name} | Portfolio`,
       url: getSiteUrl(),
     },
   };
 }
 
 export function buildProjectMetadata(project: Project): Metadata {
-  const title = project.seo?.title ?? `${project.title} — Case Study`;
+  const title = project.seo?.title ?? `${project.title} | Case Study`;
   const description = truncateDescription(
     project.seo?.description ??
       project.sections.find((s) => s.kind === "overview")?.content ??
