@@ -11,6 +11,11 @@ type RevealProps = {
   distance?: "sm" | "md";
 };
 
+/**
+ * Fade/slide content in when it enters the viewport.
+ * Starts visible so SSR / slow JS / a broken bundle never leave
+ * the page looking like CSS failed to load (blank hero, nav only).
+ */
 export function Reveal({
   children,
   className,
@@ -18,7 +23,7 @@ export function Reveal({
   distance = "sm",
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const node = ref.current;
@@ -34,6 +39,19 @@ export function Reveal({
       setVisible(true);
       return;
     }
+
+    const rect = node.getBoundingClientRect();
+    const inView =
+      rect.top < window.innerHeight * 0.94 && rect.bottom > window.innerHeight * 0.02;
+
+    // Keep above-the-fold content visible — no hide/show flash.
+    if (inView) {
+      setVisible(true);
+      return;
+    }
+
+    // Below the fold: hide, then reveal on scroll.
+    setVisible(false);
 
     const observer = new IntersectionObserver(
       ([entry]) => {
