@@ -121,6 +121,21 @@ export const websites: Website[] = [
     status: "live",
     order: 8,
   },
+  {
+    slug: "synapseflow",
+    title: "SynapseFlow",
+    description: "AI collaboration workspace",
+    mockup: {
+      src: "/images/websites/synapseflow/mockup.jpg",
+      alt: "SynapseFlow AI workspace landing page with indigo hero and product dashboard",
+      width: 1600,
+      height: 900,
+      cardBackground: "#FAFBFC",
+    },
+    url: "https://studio.hammedshotola.com/synapseflow",
+    status: "live",
+    order: 9,
+  },
 ];
 
 export function getAllWebsites(): Website[] {
