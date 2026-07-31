@@ -14,6 +14,13 @@ export const domeProject: Project = {
     height: 1743,
     cardBackground: "#F5F5F5",
   },
+  cardCover: {
+    src: "/images/projects/dome/cover-card.jpg",
+    alt: "Image showing the Design system at Zome",
+    width: 1024,
+    height: 892,
+    cardBackground: "#F5F5F5",
+  },
   timeline: "Design systems",
   featured: true,
   order: 4,

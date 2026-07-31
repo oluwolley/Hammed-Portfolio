@@ -17,8 +17,8 @@ export const xendProject: Project = {
   cardCover: {
     src: "/images/projects/xend/cover-card.jpg",
     alt: "Xend Finance app on two phones showing account balance and send money flow",
-    width: 1024,
-    height: 892,
+    width: 960,
+    height: 836,
     cardBackground: "#FFFFFF",
   },
   timeline: "Banking · Crypto · Savings",

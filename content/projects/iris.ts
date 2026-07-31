@@ -17,8 +17,8 @@ export const irisProject: Project = {
   cardCover: {
     src: "/images/projects/iris/cover-card.jpg",
     alt: "IRIS analytics dashboard showing call metrics, CSAT ratings, and user activities",
-    width: 1024,
-    height: 629,
+    width: 960,
+    height: 589,
     cardBackground: "#FFFFFF",
   },
   timeline: "CMS · Web application",

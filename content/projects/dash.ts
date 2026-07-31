@@ -18,8 +18,8 @@ export const dashProject: Project = {
   cardCover: {
     src: "/images/projects/dash/cover-card.jpg",
     alt: "Dash remittance app on two phones showing balance, transactions, and send flow",
-    width: 1024,
-    height: 892,
+    width: 960,
+    height: 836,
     cardBackground: "#FFFFFF",
   },
   timeline: "Fintech · Bank · Remittance",

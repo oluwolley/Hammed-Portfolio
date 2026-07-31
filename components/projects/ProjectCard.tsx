@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils";
 type ProjectCardProps = {
   project: Project;
   className?: string;
+  /** Prefetch above-the-fold cards on the homepage */
+  priority?: boolean;
 };
 
-export function ProjectCard({ project, className }: ProjectCardProps) {
+export function ProjectCard({ project, className, priority = false }: ProjectCardProps) {
   const media = project.cardCover ?? project.cover;
   const canvas = media.cardBackground ?? project.cover.cardBackground ?? "#F4F4F5";
 
@@ -32,8 +34,10 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           src={media.src}
           alt={media.alt}
           fill
+          priority={priority}
+          quality={75}
           className="object-contain object-center p-2 sm:p-3 transition-transform duration-500 ease-out group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 540px"
         />
       </div>
       <div className="p-5 sm:p-6 md:p-7">

@@ -27,6 +27,7 @@ export function Hero() {
                   width={112}
                   height={112}
                   sizes="44px"
+                  quality={75}
                   className="size-full rounded-full object-cover object-[center_38%]"
                   priority
                 />

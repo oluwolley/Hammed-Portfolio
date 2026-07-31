@@ -17,7 +17,7 @@ export function SelectedWork() {
           {projects.map((project, index) => (
             <li key={project.slug}>
               <Reveal delayMs={index * 60}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} priority={index < 2} />
               </Reveal>
             </li>
           ))}
