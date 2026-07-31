@@ -136,6 +136,21 @@ export const websites: Website[] = [
     status: "live",
     order: 9,
   },
+  {
+    slug: "costgraph",
+    title: "CostGraph",
+    description: "AI cloud costs copilot",
+    mockup: {
+      src: "/images/websites/costgraph/mockup.jpg",
+      alt: "CostGraph FinOps landing page with cloud cost dashboard and KPI cards",
+      width: 1600,
+      height: 900,
+      cardBackground: "#F4F8FF",
+    },
+    url: "https://studio.hammedshotola.com/costgraph",
+    status: "live",
+    order: 10,
+  },
 ];
 
 export function getAllWebsites(): Website[] {
