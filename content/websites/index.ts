@@ -91,6 +91,21 @@ export const websites: Website[] = [
     status: "live",
     order: 6,
   },
+  {
+    slug: "eventflow",
+    title: "EventFlow",
+    description: "Premium event platform",
+    mockup: {
+      src: "/images/websites/eventflow/mockup.jpg",
+      alt: "EventFlow dark purple event platform homepage with glass cards",
+      width: 1600,
+      height: 900,
+      cardBackground: "#07060D",
+    },
+    url: "https://studio.hammedshotola.com/eventflow",
+    status: "live",
+    order: 7,
+  },
 ];
 
 export function getAllWebsites(): Website[] {
