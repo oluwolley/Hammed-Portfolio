@@ -100,7 +100,7 @@ export const websites: Website[] = [
       alt: "EventFlow dark purple event platform homepage with glass cards",
       width: 1600,
       height: 900,
-      cardBackground: "#07060D",
+      cardBackground: "#0A0908",
     },
     url: "https://studio.hammedshotola.com/eventflow",
     status: "live",
