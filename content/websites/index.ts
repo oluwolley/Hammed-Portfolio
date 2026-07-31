@@ -112,10 +112,10 @@ export const websites: Website[] = [
     description: "Enterprise logistics dashboard",
     mockup: {
       src: "/images/websites/fleetiq/mockup.jpg",
-      alt: "FleetIQ logistics operations dashboard with KPIs, charts, and shipment table",
+      alt: "FleetIQ fleet overview dashboard with usage chart and dispatch logs",
       width: 1600,
       height: 900,
-      cardBackground: "#F4F5F7",
+      cardBackground: "#F7F7F9",
     },
     url: "https://studio.hammedshotola.com/fleetiq",
     status: "live",
