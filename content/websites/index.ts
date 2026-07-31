@@ -106,6 +106,21 @@ export const websites: Website[] = [
     status: "live",
     order: 7,
   },
+  {
+    slug: "fleetiq",
+    title: "FleetIQ",
+    description: "Enterprise logistics dashboard",
+    mockup: {
+      src: "/images/websites/fleetiq/mockup.jpg",
+      alt: "FleetIQ logistics operations dashboard with KPIs, charts, and shipment table",
+      width: 1600,
+      height: 900,
+      cardBackground: "#F4F5F7",
+    },
+    url: "https://studio.hammedshotola.com/fleetiq",
+    status: "live",
+    order: 8,
+  },
 ];
 
 export function getAllWebsites(): Website[] {
