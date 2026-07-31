@@ -14,9 +14,8 @@ export function WebsitesHero({ headingId = "websites-heading" }: WebsitesHeroPro
         just design and pure code.
       </h1>
       <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg md:leading-relaxed">
-        Welcome to my digital sandbox. The projects in this section aren&apos;t
-        client commissions or real-world brands they are fully functional,
-        conceptual websites built from the ground up.
+        A collection of product websites I designed and built end to end, from
+        brand and UX to polished, launch-ready interfaces.
       </p>
     </header>
   );
