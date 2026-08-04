@@ -16,10 +16,8 @@ export const siteConfig: SiteConfig = {
   intro:
     "Product (UX) Designer turning complex systems into simple, human-centred experiences, with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",
   quote: [
-    "Hi, I'm a Product (UX) Designer with a strong focus on turning complex systems into simple, human-centred experiences.",
-    "I design digital products that simplify complex systems, I bring clarity, structure, and empathy to every interface.",
-    "I care deeply about accessibility, security, and real-world usability, especially in fintech, e-commerce, and regulation-heavy environments.",
-    "If it's complex, I make it clear. If it's clunky, I make it work, always with empathy, structure, and intention.",
+    "Hi, I'm a Product Designer with experience building scalable digital products for both mobile and web platforms. I have a unique foundation in customer advocacy,",
+    "I design digital products that simplify complex systems. I bring clarity, structure, and empathy to every interface.",
   ],
   social: {
     linkedin: "https://www.linkedin.com/in/shammed/",
