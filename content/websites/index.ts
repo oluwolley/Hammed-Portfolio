@@ -151,21 +151,6 @@ export const websites: Website[] = [
     status: "live",
     order: 10,
   },
-  {
-    slug: "doctors-kitchen",
-    title: "The Doctor's Kitchen",
-    description: "Science-backed recipe platform",
-    mockup: {
-      src: "/images/websites/doctors-kitchen/mockup.jpg",
-      alt: "The Doctor's Kitchen homepage with editorial food hero and recipe discovery",
-      width: 1600,
-      height: 900,
-      cardBackground: "#F6F1EA",
-    },
-    url: "https://studio.hammedshotola.com/doctors-kitchen",
-    status: "live",
-    order: 11,
-  },
 ];
 
 export function getAllWebsites(): Website[] {
