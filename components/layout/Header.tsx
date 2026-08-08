@@ -15,16 +15,21 @@ export function Header() {
         </Link>
         <nav aria-label="Primary" className="flex items-center gap-2 sm:gap-3">
           <ul className="hidden items-center gap-6 md:flex">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {siteConfig.nav.map((item) => {
+              const external = item.href.startsWith("http");
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <MobileNav />
           <ThemeToggle />

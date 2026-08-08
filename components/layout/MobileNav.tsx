@@ -46,17 +46,22 @@ export function MobileNav() {
         )}
       >
         <ul className="flex flex-col gap-1 px-4 py-3">
-          {siteConfig.nav.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="touch-target flex items-center rounded-md px-3 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
+          {siteConfig.nav.map((item) => {
+            const external = item.href.startsWith("http");
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className="touch-target flex items-center rounded-md px-3 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
