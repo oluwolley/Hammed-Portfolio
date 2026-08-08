@@ -1,15 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: "/websites",
-        destination: "https://studio.hammedshotola.com",
-        permanent: false,
-      },
-    ];
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     // Keep srcset candidates modest — oversized sources were crashing Mobile Safari

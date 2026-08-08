@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = {
   },
   nav: [
     { label: "Work", href: "/#work" },
-    { label: "Studio", href: "https://studio.hammedshotola.com" },
+    { label: "Studio", href: "/websites" },
     { label: "Resume", href: "/#resume" },
     { label: "Contact", href: "/#contact" },
   ],
