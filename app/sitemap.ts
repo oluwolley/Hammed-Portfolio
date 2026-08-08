@@ -13,13 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1,
   };
 
-  const websites: MetadataRoute.Sitemap[number] = {
-    url: `${base}/websites`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: 0.85,
-  };
-
   const projects = getAllProjects().map((project) => ({
     url: `${base}/projects/${project.slug}`,
     lastModified,
@@ -27,5 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [home, websites, ...projects];
+  return [home, ...projects];
 }
