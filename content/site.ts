@@ -14,9 +14,9 @@ export const siteConfig: SiteConfig = {
     height: 560,
   },
   intro:
-    "Product (UX) Designer turning complex systems into simple, human-centred experiences, with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",
+    "Product Designer turning complex systems into simple, human-centred experiences, with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",
   quote: [
-    "Hi, I'm a Product Designer with experience building scalable digital products for both mobile and web platforms. I have a unique foundation in customer advocacy,",
+    "Hi, I'm a Product Designer with experience building scalable digital products for both mobile and web platforms. I have a unique foundation in customer advocacy.",
     "I design digital products that simplify complex systems. I bring clarity, structure, and empathy to every interface.",
   ],
   social: {

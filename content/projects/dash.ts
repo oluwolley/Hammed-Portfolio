@@ -3,14 +3,14 @@ import type { Project } from "../types";
 export const dashProject: Project = {
   slug: "dash",
   title: "Designing Dash Remittance App",
-  role: "Lead Product Designer",
+  role: "Product Designer",
   impact:
-    "How we expand the product offering of dash in new market by designing a product that foster engagement.",
+    "How we expanded Dash's product offering in a new market by designing a product that fosters engagement.",
   tagline:
-    "Expanded the product offering of dash in new market by designing a product that foster engagement",
+    "Expanded Dash's product offering in a new market by designing a product that fosters engagement",
   cover: {
     src: "/images/projects/dash/cover.webp",
-    alt: "Image Showing the fully designed Interface of dash app",
+    alt: "Image showing the fully designed interface of the Dash app",
     width: 2000,
     height: 1133,
     cardBackground: "#EAF6F1",
@@ -29,7 +29,7 @@ export const dashProject: Project = {
   seo: {
     title: "Designing Dash Remittance App",
     description:
-      "Dash App Increasing the user engagement of a remittance App by 23%. - Fintech | Bank | Remittance",
+      "Dash app: increasing the user engagement of a remittance app by 23%. Fintech | Bank | Remittance",
   },
   sections: [
     {
@@ -44,7 +44,7 @@ export const dashProject: Project = {
       kind: "process",
       title: "My Role",
       content:
-        "I led the design of Dash Remittance app, working closely with designers, engineers, and product managers. My focus was to understand the business goals and understand the user pain point and behaviours design the end-to-end visual design.",
+        "I led the design of the Dash remittance app, working closely with designers, engineers, and product managers. My focus was to understand the business goals and user pain points and behaviours, then design the end-to-end visual experience.",
     },
     {
       id: "the-impact",
@@ -62,16 +62,16 @@ export const dashProject: Project = {
     {
       id: "why-is-this-a-problem",
       kind: "problem",
-      title: "Why is this a Problem",
+      title: "Why is this a problem?",
       content:
-        "According to Migration Observatory, Net Migration Hits 824,000 in 2022, 60 percentage of these Immigrants migrated from underserved countries. Sending money back home to either family or personal use became stressful in-efficient, unreliable, and broken. Dash saw an opportunity and decided to solve this problem associated with International Remittance.\n\nUsers faced multiple challenges with existing remittance services which include\n\n- High fees and poor exchange rates\n- Lack of trust and security concerns\n- Complicated user flows\n- Limited cash pick-up option\n- No real-time tracking",
+        "According to the Migration Observatory, net migration hit 824,000 in 2022. 60% of these immigrants migrated from underserved countries. Sending money back home to family or for personal use became stressful, inefficient, unreliable, and broken. Dash saw an opportunity and decided to solve this problem associated with international remittance.\n\nUsers faced multiple challenges with existing remittance services, which include:\n\n- High fees and poor exchange rates\n- Lack of trust and security concerns\n- Complicated user flows\n- Limited cash pick-up options\n- No real-time tracking",
     },
     {
       id: "how-do-our-user-feel",
       kind: "research",
-      title: "How do our user feel?",
+      title: "How do our users feel?",
       content:
-        "Working together with the PMS, and Key stakeholders, I interview users and Survey was sent out with two objectives in mind:\n\n- Understand the context, pain points, behaviour of diaspora's in the UK using International money transfer products to send funds to abroad.\n- Understand their priorities while choosing a remittance app.",
+        "Working together with the PMs and key stakeholders, I interviewed users and sent out a survey with two objectives in mind:\n\n- Understand the context, pain points, and behaviour of diaspora users in the UK using international money transfer products to send funds abroad.\n- Understand their priorities while choosing a remittance app.",
     },
     {
       id: "key-findings",
@@ -85,24 +85,24 @@ export const dashProject: Project = {
       kind: "process",
       title: "Design Approach",
       content:
-        "Before diving into design i set up some How might we Questions that address the key problem we are solving:\n\n- How might we make the onboarding seamless and frictionless for users\n- How might we reduce the waiting period for both sender and receiver\n- How might we communicate the exchange rate\n- How might we make the send money experience seamless.\n- How might we make the app secure.",
+        "Before diving into design, I set up some how might we questions that address the key problem we are solving:\n\n- How might we make the onboarding seamless and frictionless for users?\n- How might we reduce the waiting period for both sender and receiver?\n- How might we communicate the exchange rate?\n- How might we make the send money experience seamless?\n- How might we make the app secure?",
     },
     {
       id: "frictionless-onboarding",
       kind: "finalUi",
       title: "What did we ship",
       content:
-        "Frictionless onboarding that is compliant with AML and KYC Policy\n\nTo make onboarding easy and smooth while staying compliant with AML and KYC rules, we need to balance business needs with a good user experience. I designed a simplified process that uses a third-party API to verify users, which cuts down the number of steps they need to take.",
+        "Frictionless onboarding that is compliant with AML and KYC policy\n\nTo make onboarding easy and smooth while staying compliant with AML and KYC rules, we needed to balance business needs with a good user experience. I designed a simplified process that uses a third-party API to verify users, which cuts down the number of steps they need to take.",
       images: [
         {
           src: "/images/projects/dash/onboarding-1.webp",
-          alt: "Image Showing the fully the onbairding screens of dash app",
+          alt: "Image showing the onboarding screens of the Dash app",
           width: 2000,
           height: 1133,
         },
         {
           src: "/images/projects/dash/onboarding-2.webp",
-          alt: "Image Showing the fully the onbairding screens of dash app",
+          alt: "Image showing the onboarding screens of the Dash app",
           width: 2000,
           height: 1164,
         },
@@ -113,17 +113,17 @@ export const dashProject: Project = {
       kind: "decisions",
       title: "Designing for trust",
       content:
-        "Designing for trust means clearly showing users the exchange rates and any extra fees at each step, without making it too complicated. I also redesigned the currency conversion process to make it easier for users to convert money from one currency to another",
+        "Designing for trust means clearly showing users the exchange rates and any extra fees at each step, without making it too complicated. I also redesigned the currency conversion process to make it easier for users to convert money from one currency to another.",
       images: [
         {
           src: "/images/projects/dash/send-1.webp",
-          alt: "Image Showing the fully the Send money screens of dash app",
+          alt: "Image showing the send money screens of the Dash app",
           width: 1999,
           height: 1284,
         },
         {
           src: "/images/projects/dash/send-2.webp",
-          alt: "Image Showing the fully the Send money screens of dash app",
+          alt: "Image showing the send money screens of the Dash app",
           width: 2000,
           height: 1331,
         },
@@ -134,14 +134,14 @@ export const dashProject: Project = {
       kind: "outcome",
       title: "How did we do",
       content:
-        "This design led to Instant success\n\n- Over 48,000 new users joined the Dash platform, helping to boost user growth across Dash's ecosystem and in the markets where Dash already operates\n- 23% increase in user engagement monthly on dash remittance app\n- 89% Task completion on every transaction that is initiated by Customers every month",
+        "This design led to instant success:\n\n- Over 48,000 new users joined the Dash platform, helping to boost user growth across Dash's ecosystem and in the markets where Dash already operates\n- 23% increase in user engagement monthly on the Dash remittance app\n- 89% task completion on every transaction initiated by customers every month",
     },
     {
       id: "key-learnings",
       kind: "lessons",
       title: "Key Learnings and Takeaways",
       content:
-        "- Build for adoption: Building the MVP is just the first step make sure to optimise it for maximum user adoption afterward.\n- Cross - Functional Collaboration: Collaborating with both direct and indirect stakeholders makes me understand that Crafting seamless user experience especially in fintech space must align with the regulatory requirements\n- Feedback is Key: I gained insights into how early feedback from user testing can inform the design process.",
+        "- Build for adoption: Building the MVP is just the first step. Make sure to optimise it for maximum user adoption afterward.\n- Cross-functional collaboration: Collaborating with both direct and indirect stakeholders helped me understand that crafting a seamless user experience, especially in the fintech space, must align with regulatory requirements.\n- Feedback is key: I gained insights into how early feedback from user testing can inform the design process.",
     },
   ],
 };
