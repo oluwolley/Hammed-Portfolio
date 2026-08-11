@@ -10,7 +10,7 @@ export const xendProject: Project = {
   cover: {
     src: "/images/projects/xend/cover.webp",
     alt: "Image showing the screens of the Xend app",
-    width: 2000,
+    width: 1903,
     height: 1052,
     cardBackground: "#EEF2F7",
   },
@@ -99,7 +99,7 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/after.webp",
           alt: "Image showing the screens designed after the redesign",
-          width: 1999,
+          width: 1829,
           height: 995,
         },
       ],
@@ -114,8 +114,8 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/verification.webp",
           alt: "Image showing the verification flows of the Xend app",
-          width: 2000,
-          height: 1812,
+          width: 1715,
+          height: 1716,
         },
       ],
     },
@@ -129,7 +129,7 @@ export const xendProject: Project = {
         {
           src: "/images/projects/xend/services.webp",
           alt: "Image showing other service screens of the Xend app",
-          width: 2000,
+          width: 1942,
           height: 1269,
         },
       ],

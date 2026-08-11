@@ -23,7 +23,7 @@ export const domeProject: Project = {
   },
   timeline: "Design systems",
   featured: true,
-  order: 4,
+  order: 5,
   mediaFit: "cover",
   related: ["iris", "xend-finance"],
   seo: {

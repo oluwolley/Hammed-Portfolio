@@ -154,7 +154,11 @@ type ImageGalleryProps = {
   fit?: "cover" | "contain";
 };
 
-export function ImageGallery({ images, className, fit = "contain" }: ImageGalleryProps) {
+export function ImageGallery({
+  images,
+  className,
+  fit = "contain",
+}: ImageGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const fillCover = fit === "cover";
 
@@ -177,7 +181,7 @@ export function ImageGallery({ images, className, fit = "contain" }: ImageGaller
                   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
                   fillCover
                     ? "relative aspect-[16/10] bg-muted"
-                    : "bg-muted/40 px-3 py-6 hover:bg-muted/60 sm:px-6 sm:py-8 md:px-8",
+                    : "bg-background",
                 )}
                 onClick={() => setLightboxIndex(i)}
               >
@@ -195,7 +199,8 @@ export function ImageGallery({ images, className, fit = "contain" }: ImageGaller
                     alt={img.alt}
                     width={width}
                     height={height}
-                    className="mx-auto h-auto w-full max-w-5xl object-contain"
+                    quality={90}
+                    className="mx-auto h-auto w-full object-contain"
                     sizes="(max-width: 1280px) 100vw, 1024px"
                   />
                 )}

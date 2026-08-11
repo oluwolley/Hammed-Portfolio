@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Project } from "@/content/types";
 import { FadeImage } from "@/components/motion/FadeImage";
-import { estimateReadingTimeMinutes, getVisibleSections } from "@/lib/case-study";
+import { estimateReadingTimeMinutes } from "@/lib/case-study";
 import { cn } from "@/lib/utils";
 
 type CaseStudyHeroProps = {
@@ -10,7 +10,6 @@ type CaseStudyHeroProps = {
 
 export function CaseStudyHero({ project }: CaseStudyHeroProps) {
   const readingMinutes = estimateReadingTimeMinutes(project.sections);
-  const visibleCount = getVisibleSections(project.sections).length;
   const width = project.cover.width ?? 2400;
   const height = project.cover.height ?? 1350;
   const fillCover = project.mediaFit === "cover";
@@ -30,7 +29,7 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
           "mt-8 overflow-hidden rounded-2xl border border-border",
           fillCover
             ? "relative aspect-[16/10] w-full"
-            : "bg-muted/40 px-3 py-6 sm:px-6 sm:py-8 md:px-10 md:py-12",
+            : "bg-background",
         )}
         style={
           fillCover
@@ -56,8 +55,9 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
             alt={project.cover.alt}
             width={width}
             height={height}
-            className="mx-auto h-auto w-full max-w-5xl object-contain"
+            className="mx-auto h-auto w-full object-contain"
             priority
+            quality={90}
             sizes="(max-width: 1280px) 100vw, 1024px"
           />
         )}
@@ -73,17 +73,13 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
         <dl className="mt-6 flex flex-col gap-2 text-sm text-muted-foreground sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
           {project.timeline ? (
             <div className="flex flex-wrap gap-2">
-              <dt className="font-medium text-foreground/80">Timeline</dt>
+              <dt className="font-medium text-foreground/80">Category</dt>
               <dd>{project.timeline}</dd>
             </div>
           ) : null}
           <div className="flex gap-2">
             <dt className="font-medium text-foreground/80">Reading time</dt>
             <dd>{readingMinutes} min</dd>
-          </div>
-          <div className="flex gap-2">
-            <dt className="font-medium text-foreground/80">Sections</dt>
-            <dd>{visibleCount}</dd>
           </div>
         </dl>
       </div>

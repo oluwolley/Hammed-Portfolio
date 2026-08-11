@@ -2,9 +2,16 @@ import type { Project } from "../types";
 import { dashProject } from "./dash";
 import { xendProject } from "./xend";
 import { irisProject } from "./iris";
+import { odaProject } from "./oda";
 import { domeProject } from "./dome";
 
-export const projects: Project[] = [dashProject, xendProject, irisProject, domeProject];
+export const projects: Project[] = [
+  dashProject,
+  xendProject,
+  irisProject,
+  odaProject,
+  domeProject,
+];
 
 export function getAllProjects(): Project[] {
   return [...projects].sort((a, b) => a.order - b.order);
