@@ -2,11 +2,12 @@ import type { Project } from "../types";
 
 export const odaProject: Project = {
   slug: "oda-merchant",
-  title: "ODA Merchant",
+  title: "ODA - Powering local Commerce",
   role: "Founding Product Designer",
   impact:
     "How I designed ODA, a B2B e-commerce platform that empowers stores of all sizes by connecting them with reliable suppliers.",
-  tagline: "ODA - Powering local commerce",
+  tagline:
+    "How we drove revenue with an app that connects merchants with riders network",
   cover: {
     src: "/images/projects/oda/cover.jpg",
     alt: "ODA Merchant app screens showing sign in, home, order tracking, and category selection",
