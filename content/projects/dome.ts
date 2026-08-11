@@ -22,7 +22,7 @@ export const domeProject: Project = {
     cardBackground: "#F5F5F5",
   },
   timeline: "Design systems",
-  featured: true,
+  featured: false,
   order: 5,
   mediaFit: "cover",
   related: ["iris", "xend-finance"],

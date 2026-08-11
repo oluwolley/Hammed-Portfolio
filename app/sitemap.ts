@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllProjects } from "@/content/projects";
+import { getFeaturedProjects } from "@/content/projects";
 import { getSiteUrl } from "@/lib/utils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1,
   };
 
-  const projects = getAllProjects().map((project) => ({
+  const projects = getFeaturedProjects().map((project) => ({
     url: `${base}/projects/${project.slug}`,
     lastModified,
     changeFrequency: "monthly" as const,

@@ -33,13 +33,13 @@ export function getAdjacentProjects(slug: string): {
   previous: Project | null;
   next: Project | null;
 } {
-  const all = getAllProjects();
-  const index = all.findIndex((p) => p.slug === slug);
+  const listed = getFeaturedProjects();
+  const index = listed.findIndex((p) => p.slug === slug);
   if (index === -1) return { previous: null, next: null };
 
   return {
-    previous: index > 0 ? all[index - 1]! : null,
-    next: index < all.length - 1 ? all[index + 1]! : null,
+    previous: index > 0 ? listed[index - 1]! : null,
+    next: index < listed.length - 1 ? listed[index + 1]! : null,
   };
 }
 
@@ -48,6 +48,6 @@ export function getRelatedProjects(slugs: string[] | undefined, currentSlug: str
   return slugs
     .filter((slug) => slug !== currentSlug)
     .map((slug) => getProject(slug))
-    .filter((p): p is Project => Boolean(p))
+    .filter((p): p is Project => Boolean(p) && p.featured)
     .slice(0, 2);
 }
