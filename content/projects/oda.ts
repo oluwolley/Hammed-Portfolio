@@ -28,6 +28,8 @@ export const odaProject: Project = {
   mediaFit: "contain",
   related: ["iris", "design-system"],
   website: "https://www.oda.com.ng/",
+  disclaimer:
+    "To respect my non-disclosure agreement, certain confidential details and proprietary data have been anonymized or modified in this case study.",
   seo: {
     title: "ODA Merchant",
     description:

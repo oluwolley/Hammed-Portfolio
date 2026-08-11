@@ -100,6 +100,8 @@ export type Project = {
   website?: string;
   /** Button label for the website CTA. Default: Visit website */
   websiteLabel?: string;
+  /** Optional note shown under the cover image */
+  disclaimer?: string;
   seo?: {
     title?: string;
     description?: string;

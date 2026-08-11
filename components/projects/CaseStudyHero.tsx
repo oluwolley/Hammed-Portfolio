@@ -63,6 +63,12 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
         )}
       </div>
 
+      {project.disclaimer ? (
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+          {project.disclaimer}
+        </p>
+      ) : null}
+
       <div className="mt-8 max-w-3xl">
         <p className="text-sm text-muted-foreground">{project.role}</p>
         <h1 className="mt-2 text-[clamp(1.75rem,6vw,3rem)] font-medium tracking-tight break-words md:text-5xl md:leading-tight">
