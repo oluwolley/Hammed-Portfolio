@@ -5,7 +5,7 @@ export const odaProject: Project = {
   title: "ODA - Powering local Commerce",
   role: "Founding Product Designer",
   impact:
-    "How I designed ODA, a B2B e-commerce platform that empowers stores of all sizes by connecting them with reliable suppliers.",
+    "How we drove revenue with an app that connects merchants with riders network",
   tagline:
     "How we drove revenue with an app that connects merchants with riders network",
   cover: {
@@ -27,6 +27,7 @@ export const odaProject: Project = {
   order: 4,
   mediaFit: "contain",
   related: ["iris", "design-system"],
+  website: "https://www.oda.com.ng/",
   seo: {
     title: "ODA Merchant",
     description:

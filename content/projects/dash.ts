@@ -26,6 +26,8 @@ export const dashProject: Project = {
   featured: true,
   order: 1,
   related: ["xend-finance", "iris"],
+  website: "https://apps.apple.com/ng/app/Dash-app/id17677098",
+  websiteLabel: "Download app",
   seo: {
     title: "Designing Dash Remittance App",
     description:

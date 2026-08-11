@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { CaseStudyChrome } from "@/components/projects/CaseStudyChrome";
 import { CaseStudyHero } from "@/components/projects/CaseStudyHero";
 import { CaseStudySectionBlock } from "@/components/projects/CaseStudySection";
+import { CaseStudyWebsiteCta } from "@/components/projects/CaseStudyWebsiteCta";
 import { ProjectPager } from "@/components/projects/ProjectPager";
 import {
   MobileTableOfContents,
@@ -54,6 +55,7 @@ export default async function ProjectPage({ params }: PageProps) {
                 />
               ))}
             </div>
+            <CaseStudyWebsiteCta project={project} />
             <ProjectPager previous={previous} next={next} />
           </article>
 

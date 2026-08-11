@@ -96,6 +96,10 @@ export type Project = {
   mediaFit?: "cover" | "contain";
   sections: CaseStudySection[];
   related?: string[];
+  /** Live product site. Omit to hide the case study website CTA. */
+  website?: string;
+  /** Button label for the website CTA. Default: Visit website */
+  websiteLabel?: string;
   seo?: {
     title?: string;
     description?: string;
