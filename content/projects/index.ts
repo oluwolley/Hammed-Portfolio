@@ -48,6 +48,6 @@ export function getRelatedProjects(slugs: string[] | undefined, currentSlug: str
   return slugs
     .filter((slug) => slug !== currentSlug)
     .map((slug) => getProject(slug))
-    .filter((p): p is Project => Boolean(p) && p.featured)
+    .filter((p): p is Project => p != null && p.featured)
     .slice(0, 2);
 }
