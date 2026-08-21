@@ -9,7 +9,7 @@ type WebsiteCardProps = {
 
 export function WebsiteCard({ website, className }: WebsiteCardProps) {
   const isLive = website.status === "live" && Boolean(website.url);
-  const canvas = website.mockup.cardBackground ?? "#0B0B0C";
+  const canvas = website.mockup.cardBackground ?? "var(--media-canvas-site)";
 
   const body = (
     <>

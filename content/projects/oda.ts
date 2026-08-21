@@ -2,7 +2,7 @@ import type { Project } from "../types";
 
 export const odaProject: Project = {
   slug: "oda-merchant",
-  title: "ODA - Powering local Commerce",
+  title: "Oda - Powering local commerce",
   role: "Founding Product Designer",
   impact:
     "How we drove revenue with an app that connects merchants with riders network",
@@ -16,11 +16,10 @@ export const odaProject: Project = {
     cardBackground: "#FFFFFF",
   },
   cardCover: {
-    src: "/images/projects/oda/cover.jpg",
+    src: "/images/projects/oda/cover-card.png",
     alt: "ODA Merchant app screens showing sign in, home, order tracking, and category selection",
-    width: 4124,
-    height: 2044,
-    cardBackground: "#FFFFFF",
+    width: 1199,
+    height: 614,
   },
   timeline: "e-Commerce",
   featured: true,

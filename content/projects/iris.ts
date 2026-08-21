@@ -2,24 +2,22 @@ import type { Project } from "../types";
 
 export const irisProject: Project = {
   slug: "iris",
-  title: "IRIS - Streamlining back-office tools",
+  title: "Iris - Streamlining back office tools",
   role: "Product Designer",
   impact:
     "Redesigning our back-office tools to align with business needs, eliminate expensive third-party CRM dependencies, and boost customer support efficiency by 80%",
   tagline: "Streamlined the customer support tools to reduce the resolution time by half",
   cover: {
-    src: "/images/projects/iris/cover.webp",
-    alt: "Image showing a screen of the IRIS dashboard",
-    width: 2000,
-    height: 1331,
-    cardBackground: "#FFFFFF",
+    src: "/images/projects/iris/cover-card.png",
+    alt: "IRIS analytics dashboard showing call metrics, CSAT ratings, and user activities",
+    width: 4841,
+    height: 3222,
   },
   cardCover: {
-    src: "/images/projects/iris/cover-card.jpg",
+    src: "/images/projects/iris/cover-card.png",
     alt: "IRIS analytics dashboard showing call metrics, CSAT ratings, and user activities",
-    width: 960,
-    height: 589,
-    cardBackground: "#FFFFFF",
+    width: 4841,
+    height: 3222,
   },
   timeline: "CMS · Web application",
   featured: true,
@@ -27,7 +25,7 @@ export const irisProject: Project = {
   mediaFit: "cover",
   related: ["xend-finance", "design-system"],
   seo: {
-    title: "IRIS - Streamlining back-office tools",
+    title: "Iris - Streamlining back office tools",
     description:
       "IRIS: streamline the customer support tools to reduce resolution time. CMS | Web application",
   },

@@ -14,13 +14,13 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(0,0,0,0.06),transparent)] dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(255,255,255,0.08),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,var(--hero-glow),transparent)]"
       />
       <Container>
         <Reveal>
           <div className="flex items-center gap-3">
             {siteConfig.avatar ? (
-              <span className="relative inline-block size-10 shrink-0 overflow-hidden rounded-full bg-[#F3F3F3] ring-1 ring-border sm:size-11">
+              <span className="relative inline-block size-10 shrink-0 overflow-hidden rounded-full bg-avatar-canvas ring-1 ring-border sm:size-11">
                 <Image
                   src={siteConfig.avatar.src}
                   alt={siteConfig.avatar.alt}

@@ -2,6 +2,7 @@
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import type { ReactNode } from "react";
+import { ThemePresetProvider } from "@/components/layout/ThemePresetProvider";
 
 type ThemeProviderProps = {
   children: ReactNode;
@@ -15,7 +16,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <ThemePresetProvider>{children}</ThemePresetProvider>
     </NextThemesProvider>
   );
 }

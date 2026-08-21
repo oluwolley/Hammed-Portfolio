@@ -33,7 +33,7 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
         )}
         style={
           fillCover
-            ? { backgroundColor: canvas ?? "#FFFFFF" }
+            ? { backgroundColor: canvas ?? "var(--media-canvas-cover)" }
             : canvas
               ? { backgroundColor: canvas }
               : undefined

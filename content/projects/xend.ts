@@ -2,7 +2,7 @@ import type { Project } from "../types";
 
 export const xendProject: Project = {
   slug: "xend-finance",
-  title: "Xend Finance - A Cryptocurrency Bank",
+  title: "Xend Finance - A cryptocurrency bank",
   role: "Product Designer",
   impact:
     "How we increased user acquisition through the redesign of the Xend Finance mobile app",
@@ -15,11 +15,10 @@ export const xendProject: Project = {
     cardBackground: "#EEF2F7",
   },
   cardCover: {
-    src: "/images/projects/xend/cover-card.jpg",
+    src: "/images/projects/xend/cover-card.png",
     alt: "Xend Finance app on two phones showing account balance and send money flow",
-    width: 960,
-    height: 836,
-    cardBackground: "#FFFFFF",
+    width: 4841,
+    height: 4219,
   },
   timeline: "Banking · Crypto · Savings",
   featured: true,
@@ -28,7 +27,7 @@ export const xendProject: Project = {
   website: "https://apps.apple.com/us/app/xend-finance-wallet/id1587050825",
   websiteLabel: "Download app",
   seo: {
-    title: "Xend Finance - A Cryptocurrency Bank",
+    title: "Xend Finance - A cryptocurrency bank",
     description:
       "Xend: driving user acquisition through redesign of the Xend mobile app. Banking | Crypto | Savings",
   },
