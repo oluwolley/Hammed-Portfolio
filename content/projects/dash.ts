@@ -2,7 +2,7 @@ import type { Project } from "../types";
 
 export const dashProject: Project = {
   slug: "dash",
-  title: "Designing Dash Remittance App",
+  title: "Dash - A remittance app",
   role: "Product Designer",
   impact:
     "How we expanded Dash's product offering in a new market by designing a product that fosters engagement.",
@@ -16,11 +16,10 @@ export const dashProject: Project = {
     cardBackground: "#EAF6F1",
   },
   cardCover: {
-    src: "/images/projects/dash/cover-card.jpg",
+    src: "/images/projects/dash/cover-card.png",
     alt: "Dash remittance app on two phones showing balance, transactions, and send flow",
-    width: 960,
-    height: 836,
-    cardBackground: "#FFFFFF",
+    width: 2445,
+    height: 1835,
   },
   timeline: "Fintech · Bank · Remittance",
   featured: true,
@@ -29,7 +28,7 @@ export const dashProject: Project = {
   website: "https://apps.apple.com/ng/app/Dash-app/id17677098",
   websiteLabel: "Download app",
   seo: {
-    title: "Designing Dash Remittance App",
+    title: "Dash - A remittance app",
     description:
       "Dash app: increasing the user engagement of a remittance app by 23%. Fintech | Bank | Remittance",
   },

@@ -12,7 +12,6 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, className, priority = false }: ProjectCardProps) {
   const media = project.cardCover ?? project.cover;
-  const canvas = media.cardBackground ?? project.cover.cardBackground ?? "#F4F4F5";
 
   return (
     <Link
@@ -26,10 +25,7 @@ export function ProjectCard({ project, className, priority = false }: ProjectCar
         className,
       )}
     >
-      <div
-        className="relative aspect-[16/9] w-full overflow-hidden"
-        style={{ backgroundColor: canvas }}
-      >
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-background">
         <FadeImage
           src={media.src}
           alt={media.alt}
@@ -47,7 +43,7 @@ export function ProjectCard({ project, className, priority = false }: ProjectCar
           </h3>
           <span
             aria-hidden
-            className="shrink-0 text-muted-foreground transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-foreground motion-reduce:group-hover:translate-x-0"
+            className="shrink-0 text-muted-foreground opacity-0 transition-[opacity,transform,color] duration-300 group-hover:translate-x-0.5 group-hover:opacity-100 group-hover:text-foreground group-focus-visible:translate-x-0.5 group-focus-visible:opacity-100 group-focus-visible:text-foreground motion-reduce:group-hover:translate-x-0 motion-reduce:group-focus-visible:translate-x-0"
           >
             →
           </span>

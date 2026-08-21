@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { ThemeDebugGate } from "@/components/dev/ThemeDebugGate";
 import { buildRootMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ThemeDebugGate />
           {process.env.VERCEL ? <Analytics /> : null}
         </ThemeProvider>
       </body>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/content/site";
+import { ThemeSwitcher } from "@/components/layout/ThemeSwitcher";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { MobileNav } from "@/components/layout/MobileNav";
 
@@ -32,6 +33,7 @@ export function Header() {
             })}
           </ul>
           <MobileNav />
+          <ThemeSwitcher />
           <ThemeToggle />
         </nav>
       </div>
