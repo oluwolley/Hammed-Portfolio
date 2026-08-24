@@ -25,7 +25,7 @@ export function ProjectCard({ project, className, priority = false }: ProjectCar
         className,
       )}
     >
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-background">
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
         <FadeImage
           src={media.src}
           alt={media.alt}

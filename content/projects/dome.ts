@@ -8,18 +8,16 @@ export const domeProject: Project = {
     "How we created a scalable design system which reduces the design–development friction by 32%",
   tagline: "Designed a scalable design system which reduces design–development friction",
   cover: {
-    src: "/images/projects/dome/cover.webp",
-    alt: "Image showing the design system at Zome",
-    width: 2000,
-    height: 1743,
-    cardBackground: "#F5F5F5",
-  },
-  cardCover: {
-    src: "/images/projects/dome/cover-card.jpg",
+    src: "/images/projects/dome/cover-card.png",
     alt: "Image showing the design system at Zome",
     width: 1024,
     height: 892,
-    cardBackground: "#F5F5F5",
+  },
+  cardCover: {
+    src: "/images/projects/dome/cover-card.png",
+    alt: "Image showing the design system at Zome",
+    width: 1024,
+    height: 892,
   },
   timeline: "Design systems",
   featured: false,
@@ -89,7 +87,7 @@ export const domeProject: Project = {
       content: "Branded colour palette: Defining the different overlapping layers and colour hierarchy",
       images: [
         {
-          src: "/images/projects/dome/colors.webp",
+          src: "/images/projects/dome/colors.png",
           alt: "Branded colour palette: Defining the different overlapping layers and colour hierarchy",
           width: 2000,
           height: 1062,
@@ -104,7 +102,7 @@ export const domeProject: Project = {
         "A small set of buttons was enough to meet our current design needs, each thoughtfully built with all the necessary nested variants.",
       images: [
         {
-          src: "/images/projects/dome/buttons.webp",
+          src: "/images/projects/dome/buttons.png",
           alt: "A small set of buttons was enough to meet our current design needs, each thoughtfully built with all the necessary nested variants",
           width: 2000,
           height: 1162,
@@ -118,7 +116,7 @@ export const domeProject: Project = {
       content: "Typography properly spaced with enough line height",
       images: [
         {
-          src: "/images/projects/dome/typography.webp",
+          src: "/images/projects/dome/typography.png",
           alt: "Typography properly spaced with enough line height",
           width: 2000,
           height: 2324,
@@ -132,7 +130,7 @@ export const domeProject: Project = {
       content: "8px spacing scale to create more consistent and responsive layouts",
       images: [
         {
-          src: "/images/projects/dome/spacing.webp",
+          src: "/images/projects/dome/spacing.png",
           alt: "8px spacing scale to create more consistent and responsive layouts",
           width: 2000,
           height: 2324,

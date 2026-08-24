@@ -2,10 +2,10 @@ import type { SiteConfig } from "./types";
 
 export const siteConfig: SiteConfig = {
   name: "Hammed Shotola",
-  shortName: "Hammed S",
+  shortName: "Hammed",
   title: "Product Designer",
   credential: "UK Global Talent",
-  email: "shotolahammed01@gmail.com",
+  email: "hammedthedesigner@gmail.com",
   url: "https://hammedshotola.com",
   avatar: {
     src: "/images/hammed.jpg",
@@ -14,10 +14,11 @@ export const siteConfig: SiteConfig = {
     height: 560,
   },
   intro:
-    "Product Designer turning complex systems into simple, human-centred experiences, with a focus on accessibility, security, and usability in fintech and regulation-heavy products.",
+    "I turn ideas into clear flows, prototype and intuitive affordance that make products easier to use. Product designer who codes with AI.",
   quote: [
-    "Hi, I'm a Product Designer with experience building scalable digital products for both mobile and web platforms. I have a unique foundation in customer advocacy.",
-    "I design digital products that simplify complex systems. I bring clarity, structure, and empathy to every interface.",
+    "I turn ideas into clear flows, prototype and intuitive affordance that make products easier to use.",
+    "I'm a Product designer who codes (using AI), we call that vibe coding in this AI era.",
+    "Outside work, I love watching football and trying new things out whether is starting another streak on Duolingo, or Ice-skating.",
   ],
   social: {
     linkedin: "https://www.linkedin.com/in/shammed/",
@@ -29,8 +30,8 @@ export const siteConfig: SiteConfig = {
     available: true,
   },
   nav: [
-    { label: "Work", href: "/#work" },
-    { label: "Resume", href: "/#resume" },
+    { label: "Works", href: "/#work" },
+    { label: "Resume", href: "/resume.pdf" },
     { label: "Contact", href: "/#contact" },
   ],
 };

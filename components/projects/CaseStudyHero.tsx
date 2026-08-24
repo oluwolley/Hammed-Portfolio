@@ -13,7 +13,6 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
   const width = project.cover.width ?? 2400;
   const height = project.cover.height ?? 1350;
   const fillCover = project.mediaFit === "cover";
-  const canvas = project.cover.cardBackground;
 
   return (
     <header className="mb-12 md:mb-16">
@@ -26,18 +25,9 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
 
       <div
         className={cn(
-          "mt-8 overflow-hidden rounded-2xl border border-border",
-          fillCover
-            ? "relative aspect-[16/10] w-full"
-            : "bg-background",
+          "mt-8 overflow-hidden rounded-2xl",
+          fillCover && "relative aspect-[16/10] w-full",
         )}
-        style={
-          fillCover
-            ? { backgroundColor: canvas ?? "var(--media-canvas-cover)" }
-            : canvas
-              ? { backgroundColor: canvas }
-              : undefined
-        }
       >
         {fillCover ? (
           <FadeImage
@@ -64,13 +54,13 @@ export function CaseStudyHero({ project }: CaseStudyHeroProps) {
       </div>
 
       {project.disclaimer ? (
-        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-3xl text-sm italic leading-relaxed text-muted-foreground">
           {project.disclaimer}
         </p>
       ) : null}
 
       <div className="mt-8 max-w-3xl">
-        <p className="text-sm text-muted-foreground">{project.role}</p>
+        <p className="text-sm uppercase text-muted-foreground">{project.role}</p>
         <h1 className="mt-2 text-[clamp(1.75rem,6vw,3rem)] font-medium tracking-tight break-words md:text-5xl md:leading-tight">
           {project.title}
         </h1>

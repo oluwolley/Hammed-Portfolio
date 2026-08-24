@@ -2,17 +2,17 @@ import type { Project } from "../types";
 
 export const xendProject: Project = {
   slug: "xend-finance",
-  title: "Xend Finance - A cryptocurrency bank",
+  title: "Xend Finance",
   role: "Product Designer",
   impact:
     "How we increased user acquisition through the redesign of the Xend Finance mobile app",
-  tagline: "Drove and increased user acquisition through the redesign of the Xend mobile app",
+  tagline:
+    "Increased user acquisition through a end-to-end redesign of the Xend Finance mobile app.",
   cover: {
-    src: "/images/projects/xend/cover.webp",
+    src: "/images/projects/xend/cover.png",
     alt: "Image showing the screens of the Xend app",
     width: 1903,
     height: 1052,
-    cardBackground: "#EEF2F7",
   },
   cardCover: {
     src: "/images/projects/xend/cover-card.png",
@@ -92,13 +92,13 @@ export const xendProject: Project = {
         "Multi-stage onboarding and verification\n\nOne of the key pieces of feedback we received during design workshops and user interviews was that the signup and onboarding process felt too lengthy. To address this, I streamlined the flow into a multi-step process separating signup from verification. Clear taglines and helpful microcopy guided users through the experience, allowing quick registration without immediate identity verification. This approach ultimately reduced drop-off rates and improved user acquisition.",
       images: [
         {
-          src: "/images/projects/xend/before.webp",
+          src: "/images/projects/xend/before.png",
           alt: "Image showing the screens designed before the redesign",
           width: 1999,
           height: 995,
         },
         {
-          src: "/images/projects/xend/after.webp",
+          src: "/images/projects/xend/after.png",
           alt: "Image showing the screens designed after the redesign",
           width: 1829,
           height: 995,
@@ -113,7 +113,7 @@ export const xendProject: Project = {
         "The banking and fintech sector operates under strict regulatory requirements. To ensure compliance with federal laws, anti-money laundering (AML), and know your customer (KYC) regulations, the app implements a simplified verification process. This approach balances regulatory needs with a smooth user experience, gathering essential information without creating unnecessary friction.",
       images: [
         {
-          src: "/images/projects/xend/verification.webp",
+          src: "/images/projects/xend/verification.png",
           alt: "Image showing the verification flows of the Xend app",
           width: 1715,
           height: 1716,
@@ -128,7 +128,7 @@ export const xendProject: Project = {
         "We expanded our service offerings by partnering with multiple service providers, enabling users to conveniently pay for a variety of services including cable, airtime, data, and more directly within the app. Additionally, we integrated an in-app chat feature that was absent from the previous design, enhancing user communication and accessibility.",
       images: [
         {
-          src: "/images/projects/xend/services.webp",
+          src: "/images/projects/xend/services.png",
           alt: "Image showing other service screens of the Xend app",
           width: 1942,
           height: 1269,

@@ -174,14 +174,12 @@ export function ImageGallery({
               <button
                 type="button"
                 className={cn(
-                  "group block w-full overflow-hidden rounded-2xl border border-border text-left",
-                  "transition-[border-color,box-shadow,transform] duration-300 ease-out",
-                  "hover:border-foreground/15 hover:shadow-sm",
+                  "group block w-full overflow-hidden rounded-2xl text-left",
+                  "transition-[box-shadow,transform] duration-300 ease-out",
+                  "hover:shadow-sm",
                   "motion-reduce:transition-none",
                   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
-                  fillCover
-                    ? "relative aspect-[16/10] bg-muted"
-                    : "bg-background",
+                  fillCover && "relative aspect-[16/10]",
                 )}
                 onClick={() => setLightboxIndex(i)}
               >

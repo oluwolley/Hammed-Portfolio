@@ -48,13 +48,15 @@ export function MobileNav() {
         <ul className="flex flex-col gap-1 px-4 py-3">
           {siteConfig.nav.map((item) => {
             const external = item.href.startsWith("http");
+            const isDownload = item.href.endsWith(".pdf");
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer" : undefined}
-                  className="touch-target flex items-center rounded-md px-3 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
+                  download={isDownload || undefined}
+                  className="touch-target flex items-center rounded-md px-3 text-sm font-semibold tracking-wide text-muted-foreground hover:bg-muted hover:text-foreground"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

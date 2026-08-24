@@ -2,11 +2,12 @@ import type { Project } from "../types";
 
 export const irisProject: Project = {
   slug: "iris",
-  title: "Iris - Streamlining back office tools",
+  title: "Iris",
   role: "Product Designer",
   impact:
     "Redesigning our back-office tools to align with business needs, eliminate expensive third-party CRM dependencies, and boost customer support efficiency by 80%",
-  tagline: "Streamlined the customer support tools to reduce the resolution time by half",
+  tagline:
+    "Designed back-office tools that streamlined customer support workflows and reduced average resolution time",
   cover: {
     src: "/images/projects/iris/cover-card.png",
     alt: "IRIS analytics dashboard showing call metrics, CSAT ratings, and user activities",
@@ -92,7 +93,7 @@ export const irisProject: Project = {
       content: "Analytics dashboard: Customised analytics tailored to stakeholder needs",
       images: [
         {
-          src: "/images/projects/iris/analytics.webp",
+          src: "/images/projects/iris/analytics.png",
           alt: "Analytics dashboard: Customised analytics tailored to stakeholder needs",
           width: 2000,
           height: 1360,
@@ -107,7 +108,7 @@ export const irisProject: Project = {
         "Unified customer view: A comprehensive 360-degree customer profile accessible to all teams",
       images: [
         {
-          src: "/images/projects/iris/customer-view.webp",
+          src: "/images/projects/iris/customer-view.png",
           alt: "Unified customer view: A comprehensive 360-degree customer profile accessible to all teams",
           width: 2000,
           height: 1375,
@@ -121,7 +122,7 @@ export const irisProject: Project = {
       content: "Messaging: In-app chat with customer, edit chat, upload file, assign chat.",
       images: [
         {
-          src: "/images/projects/iris/messaging.webp",
+          src: "/images/projects/iris/messaging.png",
           alt: "Messaging: In-app chat with customer, edit chat, upload file, assign chat.",
           width: 2000,
           height: 1335,
@@ -135,7 +136,7 @@ export const irisProject: Project = {
       content: "Email: Send, reply, forward mail, upload document",
       images: [
         {
-          src: "/images/projects/iris/email.jpg",
+          src: "/images/projects/iris/email.png",
           alt: "Email: Send, reply, forward mail, upload document",
           width: 2000,
           height: 1294,
@@ -149,7 +150,7 @@ export const irisProject: Project = {
       content: "App review: iOS and Android review, reply to app store comments.",
       images: [
         {
-          src: "/images/projects/iris/app-review.webp",
+          src: "/images/projects/iris/app-review.png",
           alt: "App review: iOS and Android review, reply to app store comments.",
           width: 1999,
           height: 1289,
@@ -163,7 +164,7 @@ export const irisProject: Project = {
       content: "Settings: Invite member, assign roles, create modules that feed into the systems",
       images: [
         {
-          src: "/images/projects/iris/settings.webp",
+          src: "/images/projects/iris/settings.png",
           alt: "Settings: Invite member, assign roles, create modules that feed into the systems",
           width: 1999,
           height: 1323,
