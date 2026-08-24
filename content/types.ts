@@ -107,17 +107,3 @@ export type Project = {
     description?: string;
   };
 };
-
-export type WebsiteStatus = "live" | "comingSoon";
-
-/** Live marketing / product sites shown on the Websites gallery */
-export type Website = {
-  slug: string;
-  title: string;
-  description: string;
-  mockup: ImageRef;
-  /** Live URL when status is "live" */
-  url: string;
-  status: WebsiteStatus;
-  order?: number;
-};
