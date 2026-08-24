@@ -2,18 +2,17 @@ import type { Project } from "../types";
 
 export const dashProject: Project = {
   slug: "dash",
-  title: "Dash - A remittance app",
+  title: "Dash Mobile App",
   role: "Product Designer",
   impact:
     "How we expanded Dash's product offering in a new market by designing a product that fosters engagement.",
   tagline:
-    "Expanded Dash's product offering in a new market by designing a product that fosters engagement",
+    "Expanded Dash into a new market by designing an engagement driven product experience",
   cover: {
-    src: "/images/projects/dash/cover.webp",
+    src: "/images/projects/dash/cover.png",
     alt: "Image showing the fully designed interface of the Dash app",
     width: 2000,
     height: 1133,
-    cardBackground: "#EAF6F1",
   },
   cardCover: {
     src: "/images/projects/dash/cover-card.png",
@@ -96,13 +95,13 @@ export const dashProject: Project = {
         "Frictionless onboarding that is compliant with AML and KYC policy\n\nTo make onboarding easy and smooth while staying compliant with AML and KYC rules, we needed to balance business needs with a good user experience. I designed a simplified process that uses a third-party API to verify users, which cuts down the number of steps they need to take.",
       images: [
         {
-          src: "/images/projects/dash/onboarding-1.webp",
+          src: "/images/projects/dash/onboarding-1.png",
           alt: "Image showing the onboarding screens of the Dash app",
           width: 1540,
           height: 858,
         },
         {
-          src: "/images/projects/dash/onboarding-2.webp",
+          src: "/images/projects/dash/onboarding-2.png",
           alt: "Image showing the onboarding screens of the Dash app",
           width: 1533,
           height: 857,
@@ -117,13 +116,13 @@ export const dashProject: Project = {
         "Designing for trust means clearly showing users the exchange rates and any extra fees at each step, without making it too complicated. I also redesigned the currency conversion process to make it easier for users to convert money from one currency to another.",
       images: [
         {
-          src: "/images/projects/dash/send-1.webp",
+          src: "/images/projects/dash/send-1.png",
           alt: "Image showing the send money screens of the Dash app",
           width: 1544,
           height: 852,
         },
         {
-          src: "/images/projects/dash/send-2.webp",
+          src: "/images/projects/dash/send-2.png",
           alt: "Image showing the send money screens of the Dash app",
           width: 1524,
           height: 827,

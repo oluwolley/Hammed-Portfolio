@@ -1,23 +1,27 @@
 import { getFeaturedProjects } from "@/content/projects";
 import { Container, Section } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ProjectCard } from "@/components/projects/ProjectCard";
+import { FeaturedProjectRow } from "@/components/home/FeaturedProjectRow";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function SelectedWork() {
   const projects = getFeaturedProjects();
 
   return (
-    <Section id="work" ariaLabelledby="work-heading" className="bg-muted/20">
+    <Section id="work" ariaLabelledby="work-heading" className="pt-8 sm:pt-10 md:pt-12">
       <Container>
         <Reveal>
-          <SectionHeading id="work-heading" title="Selected work" />
+          <h2
+            id="work-heading"
+            className="text-[clamp(1.75rem,4vw,2rem)] font-medium tracking-tight text-foreground"
+          >
+            Featured Work
+          </h2>
         </Reveal>
-        <ul className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 md:gap-8">
+        <ul className="mt-12 flex flex-col gap-16 sm:mt-16 sm:gap-20 md:gap-24">
           {projects.map((project, index) => (
             <li key={project.slug}>
-              <Reveal delayMs={index * 60}>
-                <ProjectCard project={project} priority={index < 2} />
+              <Reveal delayMs={index * 40}>
+                <FeaturedProjectRow project={project} priority={index < 2} />
               </Reveal>
             </li>
           ))}

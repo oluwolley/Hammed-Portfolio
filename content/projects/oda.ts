@@ -2,18 +2,17 @@ import type { Project } from "../types";
 
 export const odaProject: Project = {
   slug: "oda-merchant",
-  title: "Oda - Powering local commerce",
+  title: "ODA",
   role: "Founding Product Designer",
   impact:
     "How we drove revenue with an app that connects merchants with riders network",
   tagline:
-    "How we drove revenue with an app that connects merchants with riders network",
+    "Boosted merchant engagement by designing an app that enables peer-to-peer buying among merchants.",
   cover: {
-    src: "/images/projects/oda/cover.jpg",
+    src: "/images/projects/oda/cover.png",
     alt: "ODA Merchant app screens showing sign in, home, order tracking, and category selection",
     width: 4124,
     height: 2044,
-    cardBackground: "#FFFFFF",
   },
   cardCover: {
     src: "/images/projects/oda/cover-card.png",
@@ -28,7 +27,7 @@ export const odaProject: Project = {
   related: ["iris", "design-system"],
   website: "https://www.oda.com.ng/",
   disclaimer:
-    "To respect my non-disclosure agreement, certain confidential details and proprietary data have been anonymized or modified in this case study.",
+    "NB: To respect my non-disclosure agreement, certain confidential details and proprietary data have been anonymized or modified in this case study.",
   seo: {
     title: "ODA Merchant",
     description:
@@ -81,7 +80,7 @@ export const odaProject: Project = {
         "We were introducing a new way for merchants to shop and a simpler way for riders to receive and fulfil orders. Because these workflows were different from what users might already be familiar with, it was important to help both merchants and riders understand how the platform works from the moment they first open the app.\n\nTo achieve this, we designed a simple onboarding flow that introduces users to the key features and explains what they can expect when using the app. The goal was to make the experience easy to understand, reduce uncertainty, and help users confidently get started.",
       images: [
         {
-          src: "/images/projects/oda/onboarding.jpg",
+          src: "/images/projects/oda/onboarding.png",
           alt: "ODA onboarding screens for merchants and riders, including role selection",
           width: 2404,
           height: 1110,
@@ -101,7 +100,7 @@ export const odaProject: Project = {
       title: "ODA Merchant",
       images: [
         {
-          src: "/images/projects/oda/merchant.jpg",
+          src: "/images/projects/oda/merchant.png",
           alt: "ODA Merchant app screens for browsing products, managing orders, and checkout",
           width: 2400,
           height: 1110,
@@ -114,7 +113,7 @@ export const odaProject: Project = {
       title: "ODA Rider",
       images: [
         {
-          src: "/images/projects/oda/rider.jpg",
+          src: "/images/projects/oda/rider.png",
           alt: "ODA Rider app screens for accepting deliveries, viewing order quantities, and pickup confirmation",
           width: 2400,
           height: 1110,
@@ -129,7 +128,7 @@ export const odaProject: Project = {
         "One of the key challenges during merchant onboarding was creating a personalised experience without overwhelming users with irrelevant product categories. Since the platform serves B2B merchants across different industries, a food retailer, for example, shouldn't have to navigate through electronics or other categories that aren't relevant to their business.\n\nTo solve this, we introduced category selection during onboarding, allowing merchants to choose the categories most relevant to their business. Their selections then shape the products and content they see across the platform.",
       images: [
         {
-          src: "/images/projects/oda/personalise-row.jpg",
+          src: "/images/projects/oda/personalise-row.png",
           alt: "Merchant onboarding flow with signup, store details, category selection, and payment",
           width: 3200,
           height: 1286,
@@ -144,7 +143,7 @@ export const odaProject: Project = {
         "Unlike B2C shoppers, merchants often know exactly what they need and want to complete purchases quickly. We designed the home experience around relevance, speed, and visibility.\n\nI introduced a discounted products section to promote products the parent distribution company wanted to sell, balancing merchant relevance with commercial goals. Since B2B merchants often search for specific products rather than browse, we made search highly prominent to help them find products and complete orders faster. Merchants can easily view their order status and track deliveries, giving them visibility throughout the fulfilment journey.",
       images: [
         {
-          src: "/images/projects/oda/home-search.jpg",
+          src: "/images/projects/oda/home-search.png",
           alt: "ODA Merchant home, shop, and cart screens designed for fast B2B ordering",
           width: 2400,
           height: 1110,
@@ -159,7 +158,7 @@ export const odaProject: Project = {
         "I designed a dedicated order details page to give merchants real-time visibility into their products, including acceptance status, current location, and delivery progress. I also introduced a category management feature, allowing merchants to customise their feed and discover more relevant products. Together, these features give merchants greater visibility, control, and personalisation throughout their experience.",
       images: [
         {
-          src: "/images/projects/oda/other.jpg",
+          src: "/images/projects/oda/other.png",
           alt: "ODA Merchant order details and category management screens",
           width: 2400,
           height: 1110,
