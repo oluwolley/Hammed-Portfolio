@@ -72,12 +72,6 @@
   initial-value: #ffffff;
 }
 
-@property --media-canvas-site {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #0b0b0c;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Tier 1 — Primitives (raw values only; never referenced by components)       */
 /* -------------------------------------------------------------------------- */
@@ -93,7 +87,6 @@
   --p-gray-900: #141414;
   --p-gray-950: #0a0a0a;
   --p-white: #ffffff;
-  --p-site-canvas: #0b0b0c;
   --p-hero-glow-light: rgba(0, 0, 0, 0.06);
   --p-hero-glow-dark: rgba(255, 255, 255, 0.08);
 
@@ -126,7 +119,6 @@
   --avatar-canvas: var(--p-gray-150);
   --media-canvas: var(--p-gray-100);
   --media-canvas-cover: var(--p-white);
-  --media-canvas-site: var(--p-site-canvas);
 
   --radius-control: var(--p-radius-control);
   --radius-panel: var(--p-radius-panel);
@@ -153,7 +145,6 @@
   --avatar-canvas: var(--p-gray-150);
   --media-canvas: var(--p-gray-100);
   --media-canvas-cover: var(--p-white);
-  --media-canvas-site: var(--p-site-canvas);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -175,7 +166,6 @@
   --color-avatar-canvas: var(--avatar-canvas);
   --color-media-canvas: var(--media-canvas);
   --color-media-canvas-cover: var(--media-canvas-cover);
-  --color-media-canvas-site: var(--media-canvas-site);
 
   --radius-md: var(--radius-control);
   --radius-xl: var(--radius-panel);
