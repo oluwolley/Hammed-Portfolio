@@ -37,7 +37,7 @@ function DefinitionIcon({
       </svg>
     );
   }
-  if (name === "affordance") {
+  if (name === "product") {
     return (
       <svg viewBox="0 0 24 24" className="size-4" aria-hidden>
         <rect x="5" y="8" width="14" height="8" rx="4" fill="none" stroke={stroke} strokeWidth="1.75" />

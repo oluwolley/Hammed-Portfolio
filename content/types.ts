@@ -24,6 +24,8 @@ export type SiteConfig = {
   resume: {
     href: string;
     label: string;
+    /** Suggested filename when the browser downloads the PDF */
+    downloadFileName?: string;
     updatedAt?: string;
     /** When false, show email CTA instead of a broken PDF link */
     available?: boolean;

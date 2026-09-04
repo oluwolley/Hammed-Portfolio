@@ -24,7 +24,10 @@ export function ResumeSection() {
             />
             <div className="mt-8 flex flex-wrap items-center gap-4">
               {canDownload ? (
-                <ButtonLink href={resume.href} download>
+                <ButtonLink
+                  href={resume.href}
+                  download={resume.downloadFileName ?? true}
+                >
                   {resume.label}
                 </ButtonLink>
               ) : (

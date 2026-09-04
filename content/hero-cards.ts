@@ -9,12 +9,12 @@ export type HeroDefinitionCard = {
   id: string;
   kind: "definition";
   /** Matches a highlight key in the about copy */
-  highlightKey: "flows" | "prototype" | "affordance" | "code";
+  highlightKey: "flows" | "prototype" | "product" | "code";
   word: string;
   phonetic: string;
   partOfSpeech: string;
   definition: string;
-  icon: "flows" | "prototype" | "affordance" | "code";
+  icon: "flows" | "prototype" | "product" | "code";
   iconBackground: string;
   iconForeground: string;
 };
@@ -57,15 +57,15 @@ export const heroStackCards: HeroStackCard[] = [
     iconForeground: "#1F9D57",
   },
   {
-    id: "affordance",
+    id: "product",
     kind: "definition",
-    highlightKey: "affordance",
-    word: "af·for·dance",
-    phonetic: "[Uh-Fawr-Duhns]",
+    highlightKey: "product",
+    word: "prod·uct",
+    phonetic: "[Prod-uhkt]",
     partOfSpeech: "noun",
     definition:
-      "A visual or physical cue that suggests how an element should be used (e.g. a button that looks pressable).",
-    icon: "affordance",
+      "A digital experience designed to solve a real user problem through clear flows, thoughtful interaction, and intentional craft.",
+    icon: "product",
     iconBackground: "#F3E8FF",
     iconForeground: "#7C3AED",
   },

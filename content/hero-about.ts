@@ -19,7 +19,7 @@ export const heroAbout: AboutParagraph[] = [
       { text: ", " },
       { text: "prototype", highlight: "prototype" },
       { text: " and intuitive " },
-      { text: "affordance", highlight: "affordance" },
+      { text: "product", highlight: "product" },
       { text: " that make products easier to use." },
     ],
   },

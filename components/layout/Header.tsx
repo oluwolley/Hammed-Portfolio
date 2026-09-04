@@ -33,14 +33,19 @@ export function Header() {
           <ul className="hidden items-center gap-8 md:flex">
             {siteConfig.nav.map((item) => {
               const external = item.href.startsWith("http");
-              const isDownload = item.href.endsWith(".pdf");
+              const isResume =
+                item.href === siteConfig.resume.href || item.href.endsWith(".pdf");
               return (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     target={external ? "_blank" : undefined}
                     rel={external ? "noopener noreferrer" : undefined}
-                    download={isDownload || undefined}
+                    download={
+                      isResume
+                        ? (siteConfig.resume.downloadFileName ?? true)
+                        : undefined
+                    }
                     className="text-[13px] font-semibold tracking-wide text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}

@@ -14,24 +14,25 @@ export const siteConfig: SiteConfig = {
     height: 560,
   },
   intro:
-    "I turn ideas into clear flows, prototype and intuitive affordance that make products easier to use. Product designer who codes with AI.",
+    "I turn ideas into clear flows, prototype and intuitive product that make products easier to use. Product designer who codes with AI.",
   quote: [
-    "I turn ideas into clear flows, prototype and intuitive affordance that make products easier to use.",
+    "I turn ideas into clear flows, prototype and intuitive product that make products easier to use.",
     "I'm a Product designer who codes (using AI), we call that vibe coding in this AI era.",
     "Outside work, I love watching football and trying new things out whether is starting another streak on Duolingo, or Ice-skating.",
   ],
   social: {
-    linkedin: "https://www.linkedin.com/in/shammed/",
+    linkedin: "https://www.linkedin.com/in/hshotola/",
   },
   resume: {
-    href: "/resume.pdf",
+    href: "/Hammed's CV.pdf",
+    downloadFileName: "Hammed's CV.pdf",
     label: "Download resume (PDF)",
     updatedAt: "2026",
     available: true,
   },
   nav: [
     { label: "Works", href: "/#work" },
-    { label: "Resume", href: "/resume.pdf" },
+    { label: "Resume", href: "/Hammed's CV.pdf" },
     { label: "Contact", href: "/#contact" },
   ],
 };

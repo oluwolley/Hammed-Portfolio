@@ -24,6 +24,7 @@ export function Footer() {
           {siteConfig.resume.available !== false ? (
             <Link
               href={siteConfig.resume.href}
+              download={siteConfig.resume.downloadFileName ?? true}
               className="touch-target inline-flex items-center hover:opacity-70"
             >
               Resume
