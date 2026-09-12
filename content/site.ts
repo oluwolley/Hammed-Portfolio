@@ -21,18 +21,18 @@ export const siteConfig: SiteConfig = {
     "Outside work, I love watching football and trying new things out whether is starting another streak on Duolingo, or Ice-skating.",
   ],
   social: {
-    linkedin: "https://www.linkedin.com/in/hshotola/",
+    linkedin: "",
   },
   resume: {
-    href: "/Hammed's CV.pdf",
+    href: "",
     downloadFileName: "Hammed's CV.pdf",
     label: "Download resume (PDF)",
     updatedAt: "2026",
-    available: true,
+    available: false,
   },
   nav: [
     { label: "Works", href: "/#work" },
-    { label: "Resume", href: "/Hammed's CV.pdf" },
+    { label: "Resume", href: "/#resume" },
     { label: "Contact", href: "/#contact" },
   ],
 };

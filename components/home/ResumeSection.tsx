@@ -5,8 +5,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function ResumeSection() {
-  const { resume, email } = siteConfig;
-  const canDownload = resume.available !== false;
+  const { resume } = siteConfig;
+  const canDownload = resume.available !== false && Boolean(resume.href);
 
   return (
     <Section id="resume" ariaLabelledby="resume-heading">
@@ -23,18 +23,14 @@ export function ResumeSection() {
               }
             />
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              {canDownload ? (
+              {canDownload && resume.href ? (
                 <ButtonLink
                   href={resume.href}
                   download={resume.downloadFileName ?? true}
                 >
                   {resume.label}
                 </ButtonLink>
-              ) : (
-                <ButtonLink href={`mailto:${email}?subject=Resume%20request`}>
-                  Request resume by email
-                </ButtonLink>
-              )}
+              ) : null}
               {resume.updatedAt ? (
                 <p className="text-sm text-muted-foreground">Updated {resume.updatedAt}</p>
               ) : null}

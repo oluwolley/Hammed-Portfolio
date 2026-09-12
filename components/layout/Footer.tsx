@@ -21,7 +21,7 @@ export function Footer() {
               LinkedIN
             </a>
           )}
-          {siteConfig.resume.available !== false ? (
+          {siteConfig.resume.available !== false && siteConfig.resume.href ? (
             <Link
               href={siteConfig.resume.href}
               download={siteConfig.resume.downloadFileName ?? true}
@@ -29,14 +29,7 @@ export function Footer() {
             >
               Resume
             </Link>
-          ) : (
-            <a
-              href={`mailto:${siteConfig.email}?subject=Resume%20request`}
-              className="touch-target inline-flex items-center hover:opacity-70"
-            >
-              Resume
-            </a>
-          )}
+          ) : null}
           <a
             href={`mailto:${siteConfig.email}`}
             className="touch-target inline-flex items-center hover:opacity-70"
