@@ -82,7 +82,13 @@ export function buildRootMetadata(): Metadata {
 }
 
 export function buildHomeJsonLd() {
-  const sameAs = [siteConfig.social.linkedin].filter(Boolean) as string[];
+  const sameAs = [
+    siteConfig.social.linkedin,
+    siteConfig.social.twitter,
+    siteConfig.social.dribbble,
+    siteConfig.social.github,
+    siteConfig.social.webflow,
+  ].filter(Boolean) as string[];
 
   const person = {
     "@type": "Person",

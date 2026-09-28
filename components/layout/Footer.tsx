@@ -1,42 +1,48 @@
-import Link from "next/link";
 import { siteConfig } from "@/content/site";
+import { cn } from "@/lib/utils";
+
+const footerLinks: { label: string; href?: string }[] = [
+  { label: "Twitter", href: siteConfig.social.twitter },
+  { label: "LinkedIn", href: siteConfig.social.linkedin },
+  { label: "Dribbble", href: siteConfig.social.dribbble },
+  { label: "Webflow", href: siteConfig.social.webflow },
+];
+
+const linkClass =
+  "text-xs font-semibold uppercase tracking-wide text-foreground underline underline-offset-4 transition-opacity hover:opacity-70";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border/80">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-sm sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
-        <p className="text-muted-foreground">
-          © {year} Hammed. All rights reserved.
-        </p>
-        <div className="flex flex-wrap gap-x-8 gap-y-2 font-medium text-foreground">
-          {siteConfig.social.linkedin && (
-            <a
-              href={siteConfig.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="touch-target inline-flex items-center hover:opacity-70"
-            >
-              LinkedIN
-            </a>
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <nav aria-label="Social" className="flex flex-wrap gap-x-8 gap-y-3">
+          {footerLinks.map((link) =>
+            link.href ? (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <span
+                key={link.label}
+                className={cn(linkClass, "cursor-default opacity-50")}
+                aria-disabled="true"
+              >
+                {link.label}
+              </span>
+            ),
           )}
-          {siteConfig.resume.available !== false && siteConfig.resume.href ? (
-            <Link
-              href={siteConfig.resume.href}
-              download={siteConfig.resume.downloadFileName ?? true}
-              className="touch-target inline-flex items-center hover:opacity-70"
-            >
-              Resume
-            </Link>
-          ) : null}
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="touch-target inline-flex items-center hover:opacity-70"
-          >
-            Email
-          </a>
-        </div>
+        </nav>
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          © {year} Hammed S
+        </p>
       </div>
     </footer>
   );

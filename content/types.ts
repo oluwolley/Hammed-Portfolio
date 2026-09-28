@@ -3,6 +3,7 @@ export type SocialLinks = {
   twitter?: string;
   dribbble?: string;
   github?: string;
+  webflow?: string;
 };
 
 export type SiteConfig = {

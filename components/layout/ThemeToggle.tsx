@@ -48,7 +48,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <span
-        className="touch-target inline-block rounded-md border border-border"
+        className="inline-block size-8 rounded-full border border-border"
         aria-hidden
       />
     );
@@ -60,8 +60,9 @@ export function ThemeToggle() {
     <button
       type="button"
       className={cn(
-        "touch-target inline-flex items-center justify-center rounded-md border border-border",
+        "inline-flex size-8 items-center justify-center rounded-full",
         "text-foreground transition-colors hover:bg-muted",
+        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
       )}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}

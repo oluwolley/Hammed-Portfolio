@@ -69,7 +69,7 @@ export function ThemeSwitcher() {
   if (!mounted) {
     return (
       <span
-        className="touch-target inline-block rounded-md border border-border"
+        className="inline-block size-8 rounded-full border border-border"
         aria-hidden
       />
     );
@@ -81,8 +81,9 @@ export function ThemeSwitcher() {
         ref={buttonRef}
         type="button"
         className={cn(
-          "touch-target inline-flex items-center justify-center rounded-md border border-border",
+          "inline-flex size-8 items-center justify-center rounded-full",
           "text-foreground transition-colors hover:bg-muted",
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground",
         )}
         aria-expanded={open}
         aria-controls={panelId}
