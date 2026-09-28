@@ -87,7 +87,7 @@ export function AboutColumn() {
       <div className="flex flex-col gap-5">
         {homeAbout.facts.map((fact) => (
           <div key={fact.label} className="flex flex-col gap-2">
-            <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
+            <p className="text-[10px] font-bold uppercase tracking-wide text-foreground">
               {fact.label}
             </p>
             <p className="text-[13px] leading-[1.5] text-muted-foreground">
