@@ -49,18 +49,21 @@ function CareerCard({
 }
 
 /**
- * Year rail weights — 2019 is pushed far right so roles can stretch.
- * Index 0 = 2026 … index 7 = 2019.
+ * Year markers sit on an even rail with 2026 at the far left and 2019 at the far right.
  */
-const YEAR_WEIGHTS = [0.7, 0.85, 1, 1.05, 1.15, 1.3, 1.35, 2.7] as const;
-const YEAR_TRACK = YEAR_WEIGHTS.map((w) => `minmax(0,${w}fr)`).join(" ");
-const WEIGHT_TOTAL = YEAR_WEIGHTS.reduce((sum, w) => sum + w, 0);
+const YEAR_COUNT = careerYears.length;
+const YEAR_LAST = YEAR_COUNT - 1;
 
 function yearIndex(year: string): number {
   return careerYears.indexOf(year as (typeof careerYears)[number]);
 }
 
-/** Percent left/width for a start→end year range on the weighted rail. */
+/** Percent position along the line (0 = left/2026, 100 = right/2019). */
+function yearPos(index: number): number {
+  return (index / YEAR_LAST) * 100;
+}
+
+/** Percent left/width for a start→end year range on the rail. */
 function rangeStyle(startYear: string, endYear: string): {
   left: string;
   width: string;
@@ -70,19 +73,18 @@ function rangeStyle(startYear: string, endYear: string): {
   const from = Math.min(start, end);
   const to = Math.max(start, end);
 
-  let leftUnits = 0;
-  for (let i = 0; i < from; i += 1) leftUnits += YEAR_WEIGHTS[i]!;
-  let widthUnits = 0;
-  for (let i = from; i <= to; i += 1) widthUnits += YEAR_WEIGHTS[i]!;
+  const leftPct = yearPos(from);
+  const rightPct = yearPos(to);
+  // Single-year roles still get a readable card width
+  const widthPct =
+    to === from
+      ? 100 / YEAR_LAST
+      : Math.max(rightPct - leftPct, 100 / YEAR_LAST);
 
-  // Inset slightly so neighboring cards don't touch
-  const inset = 0.35;
-  const leftPct = (leftUnits / WEIGHT_TOTAL) * 100 + inset;
-  const widthPct = (widthUnits / WEIGHT_TOTAL) * 100 - inset * 2;
-
+  const inset = 0.4;
   return {
-    left: `${leftPct}%`,
-    width: `${Math.max(widthPct, 6)}%`,
+    left: `${leftPct + inset}%`,
+    width: `${Math.max(widthPct - inset * 2, 7)}%`,
   };
 }
 
@@ -97,16 +99,24 @@ export function CareerJourney() {
 
       <div className="hidden overflow-x-auto md:block">
         <div className="relative min-w-[1100px]">
-          <div
-            className="mb-5 grid gap-2"
-            style={{ gridTemplateColumns: YEAR_TRACK }}
-          >
-            {careerYears.map((year) => (
-              <div key={year} className="flex flex-col items-start gap-2">
-                <span className="text-sm font-semibold text-foreground">{year}</span>
-                <span className="h-4 w-px bg-border" aria-hidden />
-              </div>
-            ))}
+          <div className="relative mb-5 flex justify-between">
+            {careerYears.map((year, index) => {
+              const isLast = index === YEAR_LAST;
+              return (
+                <div
+                  key={year}
+                  className={cn(
+                    "flex flex-col gap-2",
+                    isLast ? "items-end" : "items-start",
+                  )}
+                >
+                  <span className="text-sm font-semibold text-foreground">
+                    {year}
+                  </span>
+                  <span className="h-4 w-px bg-border" aria-hidden />
+                </div>
+              );
+            })}
           </div>
           <div
             className="absolute left-0 right-0 top-[1.65rem] h-px bg-border"
