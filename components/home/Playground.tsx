@@ -1,24 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { playgroundItems } from "@/content/home";
 import { Panel, SectionLabel } from "@/components/home/Panel";
-
-function CornerDownLeftIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-      className={className}
-    >
-      <path d="M20 4V11C20 12.0609 19.5786 13.0783 18.8284 13.8284C18.0783 14.5786 17.0609 15 16 15H4" />
-      <path d="M9 10L4 15L9 20" />
-    </svg>
-  );
-}
+import { CornerDownLeftIcon } from "@/components/ui/CornerDownLeftIcon";
 
 export function Playground() {
   return (
@@ -27,9 +11,13 @@ export function Playground() {
         <SectionLabel id="playground-heading" className="pb-0">
           Playground
         </SectionLabel>
-        <span className="inline-flex size-6 items-center justify-center text-muted-foreground" aria-hidden>
+        <Link
+          href="/playground"
+          aria-label="Open the Playground"
+          className="inline-flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+        >
           <CornerDownLeftIcon className="size-6" />
-        </span>
+        </Link>
       </div>
 
       <ul className="-mx-1 flex gap-4 overflow-x-auto px-1 pb-1">
