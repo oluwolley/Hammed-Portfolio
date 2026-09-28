@@ -16,7 +16,7 @@ export function Playground() {
           aria-label="Open the Playground"
           className="inline-flex size-6 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
         >
-          <CornerDownLeftIcon className="size-6" />
+          <CornerDownLeftIcon className="size-6 -scale-x-100" />
         </Link>
       </div>
 
