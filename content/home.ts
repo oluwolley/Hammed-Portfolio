@@ -321,14 +321,14 @@ export const playgroundItems: PlaygroundItem[] = [
     },
   },
   {
-    id: "qibla",
+    id: "second-frame",
     alt: "Qibla app playground screen",
-    background: "#C9B8A8",
+    fill: true,
     image: {
-      src: "/images/home/playground/qibla.png",
+      src: "/images/home/playground/second-frame.png",
       alt: "Qibla app playground screen",
-      width: 68,
-      height: 140,
+      width: 147,
+      height: 122,
     },
   },
   {
