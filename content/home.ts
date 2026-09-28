@@ -332,14 +332,14 @@ export const playgroundItems: PlaygroundItem[] = [
     },
   },
   {
-    id: "mockup",
+    id: "third-frame",
     alt: "Design mockup playground screen",
-    background: "#F5C97A",
+    fill: true,
     image: {
-      src: "/images/home/playground/mockup.png",
+      src: "/images/home/playground/third-frame.png",
       alt: "Design mockup playground screen",
-      width: 66,
-      height: 137,
+      width: 147,
+      height: 122,
     },
   },
   {
