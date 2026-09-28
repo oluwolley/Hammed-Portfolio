@@ -54,6 +54,8 @@ export type PlaygroundItem = {
   image: ImageRef;
   href?: string;
   background?: string;
+  /** Image is a finished thumbnail (own background) and should fill the frame */
+  fill?: boolean;
 };
 
 export const homeAbout = {
@@ -308,14 +310,14 @@ export const careerEvents: CareerEvent[] = careerColumns.flatMap(
 
 export const playgroundItems: PlaygroundItem[] = [
   {
-    id: "untitled",
+    id: "first-frame",
     alt: "Playground mobile UI experiment",
-    background: "#E8A0B0",
+    fill: true,
     image: {
-      src: "/images/home/playground/untitled.png",
+      src: "/images/home/playground/first-frame.png",
       alt: "Playground mobile UI experiment",
-      width: 66,
-      height: 136,
+      width: 147,
+      height: 122,
     },
   },
   {

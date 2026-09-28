@@ -41,13 +41,23 @@ export function Playground() {
                 item.background ? { backgroundColor: item.background } : undefined
               }
             >
-              <Image
-                src={item.image.src}
-                alt={item.alt}
-                width={item.image.width ?? 66}
-                height={item.image.height ?? 120}
-                className="max-h-[70px] w-auto object-contain"
-              />
+              {item.fill ? (
+                <Image
+                  src={item.image.src}
+                  alt={item.alt}
+                  fill
+                  sizes="98px"
+                  className="object-cover"
+                />
+              ) : (
+                <Image
+                  src={item.image.src}
+                  alt={item.alt}
+                  width={item.image.width ?? 66}
+                  height={item.image.height ?? 120}
+                  className="max-h-[70px] w-auto object-contain"
+                />
+              )}
             </span>
           );
 
