@@ -98,13 +98,18 @@ function columnRange(column: CareerColumn): { left: string; width: string } {
     };
   }
   if (column.id === "freelance") {
+    // Keep Freelance compact so Dash can stretch past 2023 toward 2024.
     const inset = 0.4;
     const leftPct = yearPos(1);
     const rightPct = yearPos(yearIndex("2024"));
     return {
       left: `${leftPct + inset}%`,
-      width: `${Math.max(rightPct - leftPct + 100 / YEAR_LAST - inset * 2, 7)}%`,
+      width: `${Math.max(rightPct - leftPct - inset * 2, 7)}%`,
     };
+  }
+  if (column.id === "dash") {
+    // Stretch from past 2023 (into 2024) through 2022.
+    return rangeStyle("2024", "2022");
   }
   return rangeStyle(column.startYear, column.endYear);
 }
