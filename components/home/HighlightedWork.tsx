@@ -36,7 +36,8 @@ export function HighlightedWork() {
 
       <ul
         ref={listRef}
-        className="relative flex snap-y snap-mandatory flex-col overflow-y-auto"
+        /* Extends into the panel's right padding so the scroll bar sits at the panel edge, not over the cards */
+        className="relative -mr-5 flex snap-y snap-mandatory flex-col overflow-y-auto pr-5 sm:-mr-6 sm:pr-6"
         style={maxHeight === null ? undefined : { maxHeight }}
       >
         {highlightedWork.map((item, index) => {
