@@ -343,14 +343,14 @@ export const playgroundItems: PlaygroundItem[] = [
     },
   },
   {
-    id: "web",
-    alt: "Web playground mockup",
-    background: "#8B9DC9",
+    id: "fourth-frame",
+    alt: "Web dashboard on a laptop mockup",
+    fill: true,
     image: {
-      src: "/images/home/playground/web.png",
-      alt: "Web playground mockup",
-      width: 168,
-      height: 106,
+      src: "/images/home/playground/fourth-frame.png",
+      alt: "Web dashboard on a laptop mockup",
+      width: 147,
+      height: 122,
     },
   },
 ];
