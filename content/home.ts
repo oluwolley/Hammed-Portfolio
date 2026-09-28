@@ -228,7 +228,7 @@ export const careerColumns: CareerColumn[] = [
   },
   {
     id: "dash",
-    startYear: "2024",
+    startYear: "2023",
     endYear: "2022",
     events: [
       {
