@@ -30,7 +30,15 @@ export function HighlightedWork() {
                       : undefined
                   }
                 >
-                  {cover ? (
+                  {item.thumb ? (
+                    <Image
+                      src={item.thumb.src}
+                      alt={item.thumb.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  ) : cover ? (
                     <Image
                       src={cover.src}
                       alt={cover.alt}

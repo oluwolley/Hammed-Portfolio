@@ -11,6 +11,8 @@ export type HighlightedWorkItem = {
   role: string;
   platform: string;
   thumbBackground?: string;
+  /** Finished homepage thumbnail (own background); fills the frame instead of the project cover */
+  thumb?: ImageRef;
 };
 
 export type SideProject = {
@@ -97,7 +99,12 @@ export const highlightedWork: HighlightedWorkItem[] = [
     title: "Xend Finance",
     role: "Product Design",
     platform: "Mobile APP",
-    thumbBackground: "#7C9CFF",
+    thumb: {
+      src: "/images/home/work/xend.png",
+      alt: "Xend Finance app home and send money screens on two phones",
+      width: 834,
+      height: 440,
+    },
   },
   {
     slug: "iris",
