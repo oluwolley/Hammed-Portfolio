@@ -194,15 +194,15 @@ export const careerYears = [
 export const careerColumns: CareerColumn[] = [
   {
     id: "mecor",
-    startYear: "2025",
-    endYear: "2025",
+    startYear: "2026",
+    endYear: "2026",
     events: [
       {
         id: "mecor",
         company: "Mecor Intelligence",
         role: "Design Expert",
         period: "2025",
-        year: "2025",
+        year: "2026",
         logo: {
           src: "/images/home/career/mecor.png",
           alt: "",
@@ -214,7 +214,7 @@ export const careerColumns: CareerColumn[] = [
   },
   {
     id: "freelance",
-    startYear: "2026",
+    startYear: "2025",
     endYear: "2024",
     events: [
       {

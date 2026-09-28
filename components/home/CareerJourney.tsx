@@ -89,6 +89,23 @@ function rangeStyle(startYear: string, endYear: string): {
 }
 
 function columnRange(column: CareerColumn): { left: string; width: string } {
+  // Mecor anchors to the far left; Freelance begins immediately after it.
+  if (column.id === "mecor") {
+    const inset = 0.4;
+    return {
+      left: `${inset}%`,
+      width: `${Math.max(yearPos(1) - inset * 2, 7)}%`,
+    };
+  }
+  if (column.id === "freelance") {
+    const inset = 0.4;
+    const leftPct = yearPos(1);
+    const rightPct = yearPos(yearIndex("2024"));
+    return {
+      left: `${leftPct + inset}%`,
+      width: `${Math.max(rightPct - leftPct + 100 / YEAR_LAST - inset * 2, 7)}%`,
+    };
+  }
   return rangeStyle(column.startYear, column.endYear);
 }
 
@@ -124,9 +141,8 @@ export function CareerJourney() {
           />
 
           {/*
-            Year-aligned stretches on one row.
-            Mecor is reduced to 2025; Freelance / Dash / Xend / Great Brands
-            span their full ranges. Youverify stacks under Xend.
+            Mecor sits at the far left; Freelance starts immediately after.
+            Remaining roles stretch across their year ranges. Youverify stacks under Xend.
           */}
           <div className="relative h-[230px]">
             {careerColumns.map((column, index) => {
