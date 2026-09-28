@@ -10,7 +10,6 @@ export type HighlightedWorkItem = {
   title: string;
   role: string;
   platform: string;
-  thumbBackground?: string;
   /** Finished homepage thumbnail (own background); fills the frame instead of the project cover */
   thumb?: ImageRef;
 };
@@ -116,7 +115,12 @@ export const highlightedWork: HighlightedWorkItem[] = [
     title: "IRIS Dashboard",
     role: "Product Design",
     platform: "Web APP",
-    thumbBackground: "#D0C4FF",
+    thumb: {
+      src: "/images/home/work/iris.png",
+      alt: "IRIS dashboard overview screen on a desktop monitor",
+      width: 834,
+      height: 440,
+    },
   },
 ];
 

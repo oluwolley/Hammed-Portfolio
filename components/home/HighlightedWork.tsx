@@ -22,14 +22,7 @@ export function HighlightedWork() {
                 href={href}
                 className="group flex flex-col gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
-                <div
-                  className="relative aspect-[17/9] w-full overflow-hidden rounded-lg border border-border"
-                  style={
-                    item.thumbBackground
-                      ? { backgroundColor: item.thumbBackground }
-                      : undefined
-                  }
-                >
+                <div className="relative aspect-[17/9] w-full overflow-hidden rounded-lg border border-border">
                   {item.thumb ? (
                     <Image
                       src={item.thumb.src}
