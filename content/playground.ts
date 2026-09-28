@@ -9,6 +9,8 @@ export type PlaygroundTile = {
   /** Figma frame size; tiles scale proportionally from this */
   size: { width: number; height: number };
   image: ImageRef;
+  /** Looping muted clip that fills the tile; `image` is its poster */
+  video?: string;
   /** Where the device mockup sits inside the tile. Omit to fill the whole tile. */
   device?: TileRect;
   /** Background-coloured patches from the design that hide mockup edge artifacts */
@@ -122,10 +124,11 @@ export const playgroundTiles: PlaygroundTile[] = [
     background: "#B8B3FF",
     size: TALL,
     image: {
-      src: "/images/playground/savings-home.png",
-      alt: "Savings app home screen showing total balance and an Auto saver card",
-      width: 326,
-      height: 456,
+      src: "/images/playground/savings-home.jpg",
+      alt: "Savings app walkthrough: setting up Auto saver from the home screen",
+      width: 652,
+      height: 912,
     },
+    video: "/videos/playground/savings-home.mp4",
   },
 ];

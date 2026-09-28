@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { PlaygroundTile as Tile, TileRect } from "@/content/playground";
+import { TileVideo } from "@/components/playground/TileVideo";
 import { cn } from "@/lib/utils";
 
 function rectStyle([x, y, w, h]: TileRect, size: Tile["size"]) {
@@ -24,7 +25,9 @@ export function PlaygroundTile({ tile }: { tile: Tile }) {
       )}
       style={{ backgroundColor: tile.background }}
     >
-      {tile.device ? (
+      {tile.video ? (
+        <TileVideo src={tile.video} poster={tile.image.src} label={tile.image.alt} />
+      ) : tile.device ? (
         <div className="absolute" style={rectStyle(tile.device, size)}>
           <Image
             src={tile.image.src}
