@@ -122,6 +122,18 @@ export const highlightedWork: HighlightedWorkItem[] = [
       height: 440,
     },
   },
+  {
+    slug: "oda-merchant",
+    title: "ODA",
+    role: "Product Design",
+    platform: "Mobile APP",
+    thumb: {
+      src: "/images/home/work/oda.png",
+      alt: "ODA merchant app home and product list screens on two phones",
+      width: 3732,
+      height: 4096,
+    },
+  },
 ];
 
 export const sideProjects: SideProject[] = [
