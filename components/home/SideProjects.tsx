@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function SideProjects() {
   return (
-    <Panel id="side-projects" ariaLabelledby="side-projects-heading" className="h-full gap-0">
+    <Panel id="side-projects" ariaLabelledby="side-projects-heading" className="gap-0">
       <SectionLabel id="side-projects-heading">Side Projects</SectionLabel>
 
       <ul className="flex flex-col">
