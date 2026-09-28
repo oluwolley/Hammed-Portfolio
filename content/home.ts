@@ -201,7 +201,7 @@ export const careerColumns: CareerColumn[] = [
         id: "mecor",
         company: "Mecor Intelligence",
         role: "Design Expert",
-        period: "2025",
+        period: "2026",
         year: "2026",
         logo: {
           src: "/images/home/career/mecor.png",
