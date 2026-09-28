@@ -3,7 +3,7 @@ import { Panel, SectionLabel } from "@/components/home/Panel";
 
 export function Writings() {
   return (
-    <Panel id="writings" ariaLabelledby="writings-heading" className="gap-0">
+    <Panel id="writings" ariaLabelledby="writings-heading" className="h-full gap-0">
       <SectionLabel id="writings-heading">Writings</SectionLabel>
 
       <ul className="flex flex-col">

@@ -22,7 +22,7 @@ export function AboutColumn() {
     siteConfig.resume.available !== false && Boolean(siteConfig.resume.href);
 
   return (
-    <Panel id="about" ariaLabelledby="about-heading" className="h-full gap-6">
+    <Panel id="about" ariaLabelledby="about-heading" className="h-full gap-6 lg:flex-1">
       <SectionLabel id="about-heading">About Me</SectionLabel>
 
       <div className="relative aspect-[5/4] w-full overflow-hidden rounded-lg border border-border bg-avatar-canvas">

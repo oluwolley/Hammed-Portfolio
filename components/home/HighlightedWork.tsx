@@ -6,7 +6,7 @@ import { Panel, SectionLabel } from "@/components/home/Panel";
 
 export function HighlightedWork() {
   return (
-    <Panel id="work" ariaLabelledby="work-heading" className="h-full">
+    <Panel id="work" ariaLabelledby="work-heading" className="h-full lg:flex-1">
       <SectionLabel id="work-heading">Highlighted Work</SectionLabel>
 
       <ul className="flex flex-col">

@@ -34,7 +34,16 @@ export type CareerEvent = {
   company: string;
   role: string;
   period: string;
+  /** Year marker this card aligns under on the timeline */
+  year: string;
   logo?: ImageRef;
+};
+
+export type CareerColumn = {
+  id: string;
+  /** Year column this group sits under */
+  year: string;
+  events: CareerEvent[];
 };
 
 export type PlaygroundItem = {
@@ -180,74 +189,115 @@ export const careerYears = [
   "2019",
 ] as const;
 
-export const careerEvents: CareerEvent[] = [
+export const careerColumns: CareerColumn[] = [
   {
     id: "mecor",
-    company: "Mecor Intelligence",
-    role: "Design Expert",
-    period: "2026",
-    logo: {
-      src: "/images/home/career/mecor.png",
-      alt: "",
-      width: 36,
-      height: 36,
-    },
+    year: "2026",
+    events: [
+      {
+        id: "mecor",
+        company: "Mecor Intelligence",
+        role: "Design Expert",
+        period: "2026",
+        year: "2026",
+        logo: {
+          src: "/images/home/career/mecor.png",
+          alt: "",
+          width: 36,
+          height: 36,
+        },
+      },
+    ],
   },
   {
     id: "freelance",
-    company: "Freelance",
-    role: "Product Designer",
-    period: "2024 - 2026",
+    year: "2025",
+    events: [
+      {
+        id: "freelance",
+        company: "Freelance",
+        role: "Product Designer",
+        period: "2024 - 2026",
+        year: "2025",
+      },
+    ],
   },
   {
     id: "dash",
-    company: "Dash Finance",
-    role: "Product Designer",
-    period: "2022 - 2023",
-    logo: {
-      src: "/images/home/career/dash.png",
-      alt: "",
-      width: 36,
-      height: 36,
-    },
+    year: "2023",
+    events: [
+      {
+        id: "dash",
+        company: "Dash Finance",
+        role: "Product Designer",
+        period: "2022 - 2023",
+        year: "2023",
+        logo: {
+          src: "/images/home/career/dash.png",
+          alt: "",
+          width: 36,
+          height: 36,
+        },
+      },
+    ],
   },
   {
-    id: "xend",
-    company: "Xend Finance",
-    role: "Product Designer",
-    period: "2021 - 2022",
-    logo: {
-      src: "/images/home/career/xend.png",
-      alt: "",
-      width: 36,
-      height: 36,
-    },
-  },
-  {
-    id: "youverify",
-    company: "Youverify",
-    role: "Product Designer",
-    period: "2021",
-    logo: {
-      src: "/images/home/career/youverify.png",
-      alt: "",
-      width: 36,
-      height: 36,
-    },
+    id: "xend-youverify",
+    year: "2021",
+    events: [
+      {
+        id: "xend",
+        company: "Xend Finance",
+        role: "Product Designer",
+        period: "2021 - 2022",
+        year: "2021",
+        logo: {
+          src: "/images/home/career/xend.png",
+          alt: "",
+          width: 36,
+          height: 36,
+        },
+      },
+      {
+        id: "youverify",
+        company: "Youverify",
+        role: "Product Designer",
+        period: "2021",
+        year: "2021",
+        logo: {
+          src: "/images/home/career/youverify.png",
+          alt: "",
+          width: 36,
+          height: 36,
+        },
+      },
+    ],
   },
   {
     id: "greatbrands",
-    company: "Great brands (BA Distribution)",
-    role: "UI/UX designer",
-    period: "2019- 2021",
-    logo: {
-      src: "/images/home/career/greatbrands.png",
-      alt: "",
-      width: 36,
-      height: 36,
-    },
+    year: "2019",
+    events: [
+      {
+        id: "greatbrands",
+        company: "Great brands (BA Distribution)",
+        role: "UI/UX designer",
+        period: "2019 - 2021",
+        year: "2019",
+        logo: {
+          src: "/images/home/career/greatbrands.png",
+          alt: "",
+          width: 36,
+          height: 36,
+        },
+      },
+    ],
   },
 ];
+
+/** @deprecated Prefer careerColumns — kept for any leftover imports */
+export const careerEvents: CareerEvent[] = careerColumns.flatMap(
+  (column) => column.events,
+);
 
 export const playgroundItems: PlaygroundItem[] = [
   {
