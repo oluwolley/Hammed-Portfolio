@@ -92,7 +92,12 @@ export const highlightedWork: HighlightedWorkItem[] = [
     title: "DasH Finance Mobile APP",
     role: "Research | Product Design",
     platform: "Mobile APP",
-    thumbBackground: "#FF9EAB",
+    thumb: {
+      src: "/images/home/work/dash.png",
+      alt: "Dash app send money and home balance screens on two phones",
+      width: 834,
+      height: 440,
+    },
   },
   {
     slug: "xend-finance",
