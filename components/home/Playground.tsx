@@ -2,20 +2,20 @@ import Image from "next/image";
 import { playgroundItems } from "@/content/home";
 import { Panel, SectionLabel } from "@/components/home/Panel";
 
-function RotateIcon({ className }: { className?: string }) {
+function CornerDownLeftIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.75"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
       className={className}
     >
-      <path d="M3 12a9 9 0 1 0 3-6.7" />
-      <path d="M3 4v5h5" />
+      <path d="M20 4V11C20 12.0609 19.5786 13.0783 18.8284 13.8284C18.0783 14.5786 17.0609 15 16 15H4" />
+      <path d="M9 10L4 15L9 20" />
     </svg>
   );
 }
@@ -28,7 +28,7 @@ export function Playground() {
           Playground
         </SectionLabel>
         <span className="inline-flex size-6 items-center justify-center text-muted-foreground" aria-hidden>
-          <RotateIcon className="size-4" />
+          <CornerDownLeftIcon className="size-6" />
         </span>
       </div>
 
