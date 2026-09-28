@@ -1,67 +1,98 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useLayoutEffect, useRef, useState } from "react";
 import { highlightedWork } from "@/content/home";
 import { getProject } from "@/content/projects";
 import { Panel, SectionLabel } from "@/components/home/Panel";
+import { cn } from "@/lib/utils";
 
-/** Cards per column; extra projects flow into further columns reached by horizontal scroll. */
-const ROWS = 3;
+/** Cards visible before scrolling; the rest are reached with the vertical scroll bar. */
+const VISIBLE = 3;
 
 export function HighlightedWork() {
+  const listRef = useRef<HTMLUListElement>(null);
+  const [maxHeight, setMaxHeight] = useState<number | null>(null);
+
+  useLayoutEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+
+    const measure = () => {
+      const last = list.children[VISIBLE - 1] as HTMLElement | undefined;
+      if (last) setMaxHeight(last.offsetTop + last.offsetHeight);
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(list);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Panel id="work" ariaLabelledby="work-heading" className="h-full lg:flex-1">
       <SectionLabel id="work-heading">Highlighted Work</SectionLabel>
 
-      <div className="-mx-1 min-w-0 snap-x snap-mandatory overflow-x-auto px-1">
-        <ul className="grid auto-cols-[100%] grid-flow-col grid-rows-[repeat(3,auto)] gap-x-6">
-          {highlightedWork.map((item, index) => {
-            const project = getProject(item.slug);
-            const cover = project?.cardCover ?? project?.cover;
-            const href = `/projects/${item.slug}`;
+      <ul
+        ref={listRef}
+        className="relative flex snap-y snap-mandatory flex-col overflow-y-auto"
+        style={maxHeight === null ? undefined : { maxHeight }}
+      >
+        {highlightedWork.map((item, index) => {
+          const project = getProject(item.slug);
+          const cover = project?.cardCover ?? project?.cover;
+          const href = `/projects/${item.slug}`;
 
-            return (
-              <li key={item.slug} className="snap-start">
-                {index % ROWS > 0 ? <div className="my-5 h-px w-full bg-border" /> : null}
-                <Link
-                  href={href}
-                  className="group flex flex-col gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-                >
-                  <div className="relative aspect-[17/9] w-full overflow-hidden rounded-lg border border-border">
-                    {item.thumb ? (
-                      <Image
-                        src={item.thumb.src}
-                        alt={item.thumb.alt}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                      />
-                    ) : cover ? (
-                      <Image
-                        src={cover.src}
-                        alt={cover.alt}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 33vw"
-                        className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.02]"
-                      />
-                    ) : null}
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <p className="text-sm font-semibold text-foreground transition-colors group-hover:opacity-80">
-                      {item.title}
+          return (
+            <li
+              key={item.slug}
+              className={cn(
+                "snap-start",
+                // Extra cards stay out of layout until the scroll height is locked
+                index >= VISIBLE && maxHeight === null && "hidden",
+              )}
+            >
+              {index > 0 ? <div className="my-5 h-px w-full bg-border" /> : null}
+              <Link
+                href={href}
+                className="group flex flex-col gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              >
+                <div className="relative aspect-[17/9] w-full overflow-hidden rounded-lg border border-border">
+                  {item.thumb ? (
+                    <Image
+                      src={item.thumb.src}
+                      alt={item.thumb.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  ) : cover ? (
+                    <Image
+                      src={cover.src}
+                      alt={cover.alt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.02]"
+                    />
+                  ) : null}
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-foreground transition-colors group-hover:opacity-80">
+                    {item.title}
+                  </p>
+                  <div className="flex items-start justify-between gap-2 text-[11px]">
+                    <p className="text-muted-foreground">Role: {item.role}</p>
+                    <p className="shrink-0 text-right font-semibold text-foreground/80">
+                      {item.platform}
                     </p>
-                    <div className="flex items-start justify-between gap-2 text-[11px]">
-                      <p className="text-muted-foreground">Role: {item.role}</p>
-                      <p className="shrink-0 text-right font-semibold text-foreground/80">
-                        {item.platform}
-                      </p>
-                    </div>
                   </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </Panel>
   );
 }
