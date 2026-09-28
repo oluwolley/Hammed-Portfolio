@@ -41,8 +41,10 @@ export type CareerEvent = {
 
 export type CareerColumn = {
   id: string;
-  /** Year column this group sits under */
-  year: string;
+  /** Most recent year this role covers (left on the rail) */
+  startYear: string;
+  /** Oldest year this role covers (right on the rail) */
+  endYear: string;
   events: CareerEvent[];
 };
 
@@ -192,14 +194,15 @@ export const careerYears = [
 export const careerColumns: CareerColumn[] = [
   {
     id: "mecor",
-    year: "2026",
+    startYear: "2025",
+    endYear: "2025",
     events: [
       {
         id: "mecor",
         company: "Mecor Intelligence",
         role: "Design Expert",
-        period: "2026",
-        year: "2026",
+        period: "2025",
+        year: "2025",
         logo: {
           src: "/images/home/career/mecor.png",
           alt: "",
@@ -211,20 +214,22 @@ export const careerColumns: CareerColumn[] = [
   },
   {
     id: "freelance",
-    year: "2025",
+    startYear: "2026",
+    endYear: "2024",
     events: [
       {
         id: "freelance",
         company: "Freelance",
         role: "Product Designer",
         period: "2024 - 2026",
-        year: "2025",
+        year: "2024",
       },
     ],
   },
   {
     id: "dash",
-    year: "2023",
+    startYear: "2023",
+    endYear: "2022",
     events: [
       {
         id: "dash",
@@ -243,7 +248,8 @@ export const careerColumns: CareerColumn[] = [
   },
   {
     id: "xend-youverify",
-    year: "2021",
+    startYear: "2022",
+    endYear: "2021",
     events: [
       {
         id: "xend",
@@ -275,7 +281,8 @@ export const careerColumns: CareerColumn[] = [
   },
   {
     id: "greatbrands",
-    year: "2019",
+    startYear: "2021",
+    endYear: "2019",
     events: [
       {
         id: "greatbrands",
