@@ -89,21 +89,30 @@ function rangeStyle(startYear: string, endYear: string): {
 }
 
 function columnRange(column: CareerColumn): { left: string; width: string } {
+  const inset = 0.4;
+  const step = 100 / YEAR_LAST;
+
   // Mecor anchors to the far left; Freelance begins immediately after it.
   if (column.id === "mecor") {
-    const inset = 0.4;
     return {
       left: `${inset}%`,
       width: `${Math.max(yearPos(1) - inset * 2, 7)}%`,
     };
   }
+  // Boundary between Freelance and Dash, pulled back from the 2023 marker into 2024
+  const freelanceDashSplit = yearPos(yearIndex("2023")) - step * 0.4;
+
   if (column.id === "freelance") {
-    const inset = 0.4;
     const leftPct = yearPos(1);
-    const rightPct = yearPos(yearIndex("2024"));
     return {
       left: `${leftPct + inset}%`,
-      width: `${Math.max(rightPct - leftPct + 100 / YEAR_LAST - inset * 2, 7)}%`,
+      width: `${freelanceDashSplit - leftPct - inset * 2}%`,
+    };
+  }
+  if (column.id === "dash") {
+    return {
+      left: `${freelanceDashSplit + inset}%`,
+      width: `${yearPos(yearIndex("2022")) - freelanceDashSplit - inset * 2}%`,
     };
   }
   return rangeStyle(column.startYear, column.endYear);
