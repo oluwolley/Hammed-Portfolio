@@ -19,7 +19,10 @@ export type SideProject = {
   title: string;
   description: string;
   ctaLabel: string;
+  /** Primary destination when the project row is clicked */
   href?: string;
+  /** Optional separate destination for the CTA label (e.g. App Store) */
+  ctaHref?: string;
   icon: ImageRef;
 };
 
@@ -142,6 +145,8 @@ export const sideProjects: SideProject[] = [
     title: "The Islam App",
     description: "App that shows prayer direction and prayer times in real time",
     ctaLabel: "Download App",
+    href: "https://theislamapp.hammedshotola.com/",
+    ctaHref: "https://apps.apple.com/us/app/the-islam-app/id6803569790",
     icon: {
       src: "/images/home/side-projects/islam.png",
       alt: "",
@@ -154,6 +159,7 @@ export const sideProjects: SideProject[] = [
     title: "Minimotion",
     description: "Animate vectors, object and export as gif or MP4",
     ctaLabel: "Explore Project",
+    href: "https://motion.hammedshotola.com/",
     icon: {
       src: "/images/home/side-projects/minimotion.png",
       alt: "",
@@ -178,6 +184,7 @@ export const sideProjects: SideProject[] = [
     title: "Figma Plugins",
     description: "Plugins to speed up your design process",
     ctaLabel: "Go to Figma community",
+    href: "https://www.figma.com/@shotola",
     icon: {
       src: "/images/home/side-projects/figma-plugins.png",
       alt: "",

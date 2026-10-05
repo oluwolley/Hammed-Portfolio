@@ -10,52 +10,102 @@ export function SideProjects() {
 
       <ul className="flex flex-col">
         {sideProjects.map((project, index) => {
-          const content = (
+          const hasRowLink = Boolean(project.href);
+          const ctaHref = project.ctaHref ?? project.href;
+          const hasSeparateCta = Boolean(project.ctaHref && project.href);
+
+          const icon = (
+            <span className="relative size-9 shrink-0 overflow-hidden rounded-md border border-border bg-background">
+              <Image
+                src={project.icon.src}
+                alt={project.icon.alt || ""}
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
+            </span>
+          );
+
+          const titleBlock = (
             <>
-              <span className="relative size-9 shrink-0 overflow-hidden rounded-md border border-border bg-background">
-                <Image
-                  src={project.icon.src}
-                  alt={project.icon.alt || ""}
-                  fill
-                  sizes="36px"
-                  className="object-cover"
-                />
+              <span className="block text-sm font-semibold text-foreground">
+                {project.title}
               </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-sm font-semibold text-foreground">
-                  {project.title}
-                </span>
-                <span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">
-                  {project.description}
-                </span>
-                <span
-                  className={cn(
-                    "mt-1 block text-[11px] font-medium",
-                    project.href
-                      ? "text-foreground underline-offset-2 group-hover:underline"
-                      : "text-muted-foreground",
-                  )}
-                >
-                  {project.ctaLabel}
-                </span>
+              <span className="mt-0.5 block text-[11px] leading-snug text-muted-foreground">
+                {project.description}
               </span>
             </>
           );
 
+          const ctaClass = cn(
+            "mt-1 inline-block text-[11px] font-medium",
+            ctaHref
+              ? "text-foreground underline-offset-2 hover:underline"
+              : "text-muted-foreground",
+          );
+
+          const focusClass =
+            "rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground";
+
           return (
             <li key={project.id}>
               {index > 0 ? <div className="my-4 h-px w-full bg-border" /> : null}
-              {project.href ? (
+              {hasSeparateCta ? (
+                <div className="flex items-start gap-3">
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(focusClass, "shrink-0")}
+                    aria-label={`${project.title} website`}
+                  >
+                    {icon}
+                  </a>
+                  <span className="min-w-0 flex-1">
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(focusClass, "block")}
+                    >
+                      {titleBlock}
+                    </a>
+                    <a
+                      href={ctaHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cn(ctaClass, focusClass)}
+                    >
+                      {project.ctaLabel}
+                    </a>
+                  </span>
+                </div>
+              ) : hasRowLink ? (
                 <a
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-start gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                  className={cn(
+                    "group flex items-start gap-3",
+                    focusClass,
+                  )}
                 >
-                  {content}
+                  {icon}
+                  <span className="min-w-0 flex-1">
+                    {titleBlock}
+                    <span className={cn(ctaClass, "group-hover:underline")}>
+                      {project.ctaLabel}
+                    </span>
+                  </span>
                 </a>
               ) : (
-                <div className="flex items-start gap-3">{content}</div>
+                <div className="flex items-start gap-3">
+                  {icon}
+                  <span className="min-w-0 flex-1">
+                    {titleBlock}
+                    <span className={ctaClass}>{project.ctaLabel}</span>
+                  </span>
+                </div>
               )}
             </li>
           );
