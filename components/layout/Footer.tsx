@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 const footerLinks: { label: string; href?: string }[] = [
   { label: "Twitter", href: siteConfig.social.twitter },
   { label: "LinkedIn", href: siteConfig.social.linkedin },
-  { label: "Dribbble", href: siteConfig.social.dribbble },
-  { label: "Webflow", href: siteConfig.social.webflow },
 ];
 
 const linkClass =
