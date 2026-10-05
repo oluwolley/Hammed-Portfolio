@@ -15,7 +15,7 @@ export function SideProjects() {
           const hasSeparateCta = Boolean(project.ctaHref && project.href);
 
           const icon = (
-            <span className="relative size-9 shrink-0 overflow-hidden rounded-md border border-border bg-background">
+            <span className="relative block size-9 shrink-0 overflow-hidden rounded-md border border-border bg-background">
               <Image
                 src={project.icon.src}
                 alt={project.icon.alt || ""}
@@ -56,10 +56,19 @@ export function SideProjects() {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={cn(focusClass, "shrink-0")}
+                    className={cn(
+                      focusClass,
+                      "relative block size-9 shrink-0 overflow-hidden rounded-md border border-border bg-background",
+                    )}
                     aria-label={`${project.title} website`}
                   >
-                    {icon}
+                    <Image
+                      src={project.icon.src}
+                      alt=""
+                      fill
+                      sizes="36px"
+                      className="object-cover"
+                    />
                   </a>
                   <span className="min-w-0 flex-1">
                     <a
@@ -85,10 +94,7 @@ export function SideProjects() {
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={cn(
-                    "group flex items-start gap-3",
-                    focusClass,
-                  )}
+                  className={cn("group flex items-start gap-3", focusClass)}
                 >
                   {icon}
                   <span className="min-w-0 flex-1">
