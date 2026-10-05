@@ -199,21 +199,25 @@ export const writings: WritingItem[] = [
     id: "live-now",
     title: "Live now not later",
     date: "Jan 22, 2026",
+    href: "https://substack.com/home/post/p-185458192",
   },
   {
     id: "friction-to-flow",
     title: "Friction to Flow: A case of Peacock TV",
     date: "Jan 10, 2025",
+    href: "https://medium.com/@shotolahammed01/friction-to-flow-a-case-of-peacock-tv-f9f8ea2c484b",
   },
   {
     id: "travel-link",
     title: "Travel Link: Airline booking website",
     date: "Mar 28, 2020",
+    href: "https://medium.com/ux-planet/ui-ux-case-study-designing-a-gift-curating-app-61a4251ef8fe",
   },
   {
     id: "amadeus",
     title: "How to book a flight using Amadeus and such services",
     date: "Oct 11, 2017",
+    href: "https://medium.com/@shotolahammed01/how-to-book-a-flight-using-amadeus-and-such-services-4f2c99d8ba8c",
   },
 ];
 

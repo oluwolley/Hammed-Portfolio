@@ -2,7 +2,6 @@ import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 const footerLinks: { label: string; href?: string }[] = [
-  { label: "Twitter", href: siteConfig.social.twitter },
   { label: "LinkedIn", href: siteConfig.social.linkedin },
 ];
 

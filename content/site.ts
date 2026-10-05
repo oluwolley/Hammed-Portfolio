@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   shortName: "Hammed . S",
   title: "Product Designer",
   credential: "UK Global Talent",
-  email: "hammedthedesigner@gmail.com",
+  email: "shotolahammed01@gmail.com",
   url: "https://hammedshotola.com",
   avatar: {
     src: "/images/home/profile.png",
@@ -28,11 +28,10 @@ export const siteConfig: SiteConfig = {
     github: "",
   },
   resume: {
-    href: "",
-    downloadFileName: "Hammed's CV.pdf",
+    href: "https://docs.google.com/document/d/18iq8QZEsRit4rBgkczUcUmkn1MQIXnFbkbVeDoZfyAs/edit?tab=t.0",
     label: "View Resume",
     updatedAt: "2026",
-    available: false,
+    available: true,
   },
   nav: [],
 };
