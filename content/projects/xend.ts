@@ -24,8 +24,6 @@ export const xendProject: Project = {
   featured: true,
   order: 2,
   related: ["dash", "iris"],
-  website: "https://apps.apple.com/us/app/xend-finance-wallet/id1587050825",
-  websiteLabel: "Download app",
   seo: {
     title: "Xend Finance - A cryptocurrency bank",
     description:
